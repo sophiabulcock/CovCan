@@ -33,7 +33,7 @@ if(!require(jsonlite)) install.packages('jsonlite', repos='http://cran.rstudio.c
 if(!require(ggplot2)) install.packages("ggplot2", repos = "http://cran.us.r-project.org")
 if(!require(stringr)) install.packages("stringr", repos = "http://cran.us.r-project.org")
 if(!require(plotly)) install.packages("plotly", repos = "http://cran.us.r-project.org")
-if(!require(cowplot)) install.packages("cowplot", repos = "	https://wilkelab.org/cowplot/")
+if(!require(cowplot)) install.packages("cowplot", repos = "https://wilkelab.org/cowplot/")
 if(!require(tidyverse)) install.packages("tidyverse", repos = "http://tidyverse.tidyverse.org")
 #source('daily_count.r')
 
