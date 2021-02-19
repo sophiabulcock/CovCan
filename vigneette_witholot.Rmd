@@ -323,7 +323,11 @@ We can generate the current COVID-19 Canada map for the deceased count using the
 
 
 `covid_mapca('deceasedCount')`
+```{R}
+covid_mapca('deceasedCount')
 
+
+```
 
 
 

@@ -32,7 +32,7 @@ if(!require(stringr)) install.packages("stringr", repos = "http://cran.us.r-proj
 if(!require(plotly)) install.packages("plotly", repos = "http://cran.us.r-project.org")
 if(!require(cowplot)) install.packages("cowplot", repos = "	https://wilkelab.org/cowplot/")
 if(!require(tidyverse)) install.packages("tidyverse", repos = "http://tidyverse.tidyverse.org")
-  source('get_data.r')
+#source('get_data.r')
 
 
 

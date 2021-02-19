@@ -11,7 +11,7 @@
 
 if(!require(viridis)) install.packages("viridis", repos = "https://github.com/sjmgarnier/viridis")
 if(!require(mapcan)) install.packages("mapcan", repos = "https://github.com/mccormackandrew/mapcan")
-source("get_data.r")
+#source("get_data.r")
 
 covid_mapca<-function(stats,token="Tow8X4YNqnsWMFGbWxuPynzHh"){
     #' covid_mapca
