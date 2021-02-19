@@ -11,9 +11,9 @@
 
 if(!require(viridis)) install.packages("viridis", repos = "https://github.com/sjmgarnier/viridis")
 if(!require(mapcan)) install.packages("mapcan", repos = "https://github.com/mccormackandrew/mapcan")
-#source("get_data.r")
+require(httr)
 
-covid_mapca<-function(stats,token="Tow8X4YNqnsWMFGbWxuPynzHh"){
+covid_mapca<-function(stats,token="4T9GEYHZ7PE9w8H29xynebW3L"){
     #' covid_mapca
     #'
     #' @description This function will return a map of Canada with the selected data of either the current infected count or the current deceased count.

@@ -6,7 +6,7 @@ if(!require(httr)) install_github("r-lib/httr")
 if(!require(lubridate)) install.packages("lubridate", repos = "https://lubridate.tidyverse.org")
 if(!require(jsonlite)) install.packages("jsonlite", repos = "https://arxiv.org/abs/1403.2805")
 if(!require(tidyverse)) install.packages("tidyverse", repos = "http://tidyverse.tidyverse.org")
-
+require(httr)
 
 
 # # token from api.apify
@@ -16,7 +16,7 @@ if(!require(tidyverse)) install.packages("tidyverse", repos = "http://tidyverse.
 
 
 
-Get_data<-function(apikey='Tow8X4YNqnsWMFGbWxuPynzHh') {
+Get_data<-function(apikey='4T9GEYHZ7PE9w8H29xynebW3L') {
     #' Get_data
     #'
     #' @description This function will return a well-formed dataframe that contains basic Covid information
@@ -89,7 +89,7 @@ Get_data<-function(apikey='Tow8X4YNqnsWMFGbWxuPynzHh') {
 
 
 # get newest dataset
-Getdata_syncing<-function(apikey='Tow8X4YNqnsWMFGbWxuPynzHh') {
+Getdata_syncing<-function(apikey='4T9GEYHZ7PE9w8H29xynebW3L') {
     #' Getdata_syncin
     #'
     #' @description This function will return a latest veresion of well-formed dataframe that contains basic Covid information
