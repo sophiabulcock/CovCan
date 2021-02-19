@@ -55,7 +55,8 @@ covid_mapca<-function(stats,token="4T9GEYHZ7PE9w8H29xynebW3L"){
             theme_mapcan() +
             scale_fill_continuous(trans = 'reverse')+
             ggtitle(title)+guides(color=guide_legend("infect"))+
-            theme(plot.title = element_text(face = "bold"),legend.position = c(0.7, 0.7))
+            theme(plot.title = element_text(face = "bold"),legend.position = c(0.8, 0.6))
+            #,legend.position = c(0.7, 0.7)
         p<-p+labs(fill=name)
         p<-p+geom_text(data=c_df, aes(long, lat, label =infectedCount),color="grey", size=2.5)
         p
