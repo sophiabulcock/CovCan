@@ -28,6 +28,8 @@ Imports:
 	mapcan,
 	lubridate,
 	plotly,
+	cowplot,
+	ggrepel,
 	tidyverse
 Suggests:
 	knitr,
