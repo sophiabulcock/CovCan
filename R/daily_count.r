@@ -17,13 +17,13 @@ daily_count <- function(){
 # library(dplyr)
 # install.packages('tidyverse')
 # library(tidyverse)
-
+if(!require(lubridate)) install.packages("lubridate", repos = "https://lubridate.tidyverse.org")
 if(!require(ggplot2)) install.packages("ggplot2", repos = "http://cran.us.r-project.org")
 if(!require(tidyverse)) install.packages("tidyverse", repos = "http://tidyverse.tidyverse.org")
     require(httr)
     #source('get_data.r')
 
-    token="Tow8X4YNqnsWMFGbWxuPynzHh"
+    token="4T9GEYHZ7PE9w8H29xynebW3L"
     cleaned_data <- Get_data(token)
 
     # Add column for daily case counts

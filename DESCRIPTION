@@ -2,11 +2,19 @@ Package: CovCan
 Title: What the Package Does (One Line, Title Case)
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "Yuxuan",
+  c(person(given = "Yuxuan",
            family = "Cui",
            role = c("aut", "cre"),
-           email = "cuiyuuxuan@gmail.com")
-Description: What the package does (one paragraph).
+           email = "cuiyuuxuan@gmail.com"),
+  person(given = "Sophia",
+           family = "Bulcock",
+           role = "ctb",
+           email = "sophia.bulcock@gmail.com"),
+  person(given = "Graham",
+           family = "Kerford",
+           role = "ctb",
+           email = "graham.kerford@gmail.com"))
+Description: What the package does (one paragraph)
 License: MIT
 Depends:
 	R (>= 3.2.0)
@@ -20,8 +28,7 @@ Imports:
 	mapcan,
 	lubridate,
 	plotly,
-	tidyverse,
-	jsonlite
+	tidyverse
 Suggests:
 	knitr,
 	purrr,

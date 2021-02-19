@@ -29,8 +29,7 @@ day_covid_changes <- function(date1, region1, region2=NULL, region3=NULL,region4
 # library(ggplot2)
 # install.packages('cowplot')
 # library(cowplot)
-
-
+if(!require(jsonlite)) install.packages('jsonlite', repos='http://cran.rstudio.com/')
 if(!require(ggplot2)) install.packages("ggplot2", repos = "http://cran.us.r-project.org")
 if(!require(stringr)) install.packages("stringr", repos = "http://cran.us.r-project.org")
 if(!require(plotly)) install.packages("plotly", repos = "http://cran.us.r-project.org")

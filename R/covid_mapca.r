@@ -8,7 +8,7 @@
 
 # load dataset
 
-
+if(!require(jsonlite)) install.packages('jsonlite', repos='http://cran.rstudio.com/')
 if(!require(viridis)) install.packages("viridis", repos = "https://github.com/sjmgarnier/viridis")
 if(!require(mapcan)) install.packages("mapcan", repos = "https://github.com/mccormackandrew/mapcan")
 require(httr)

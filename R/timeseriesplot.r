@@ -32,7 +32,8 @@ time_series_plot <- function(data, start_date, end_date, region1, region2=NULL, 
 # install.packages('cowplot')
 # library(cowplot)
 
-
+if(!require(lubridate)) install.packages("lubridate", repos = "https://lubridate.tidyverse.org")
+if(!require(jsonlite)) install.packages('jsonlite', repos='http://cran.rstudio.com/')
 if(!require(ggplot2)) install.packages("ggplot2", repos = "http://cran.us.r-project.org")
 if(!require(stringr)) install.packages("stringr", repos = "http://cran.us.r-project.org")
 if(!require(plotly)) install.packages("plotly", repos = "http://cran.us.r-project.org")
