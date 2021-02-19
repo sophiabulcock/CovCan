@@ -14,8 +14,6 @@ require(httr)
 
 
 
-
-
 Get_data<-function(apikey='4T9GEYHZ7PE9w8H29xynebW3L') {
     #' Get_data
     #'
