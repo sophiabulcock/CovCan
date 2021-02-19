@@ -36,6 +36,7 @@ if(!require(stringr)) install.packages("stringr", repos = "http://cran.us.r-proj
 if(!require(plotly)) install.packages("plotly", repos = "http://cran.us.r-project.org")
 if(!require(cowplot)) install.packages("cowplot", repos = "	https://wilkelab.org/cowplot/")
 if(!require(tidyverse)) install.packages("tidyverse", repos = "http://tidyverse.tidyverse.org")
+if(!require(ggrepel)) install.packages("ggrepel", repos = "https://github.com/slowkow/ggrepel")
 require(httr)
 # if statement checks for correctness of input parameters. If this is not met, the error message is printed out in the else
 if(((is.character(day1))&&(is.character(day2))&&(is.character(region1)))==TRUE){
