@@ -26,7 +26,7 @@ The CovCan package makes getting this information simple, and allows users to:
 ```{R}
 
 library(CovCan)
-devtools::load_all()
+
 ```
 
 
@@ -310,19 +310,23 @@ Users can produce a real-time geographical map of Canada with the infected count
 
 
 We can generate the current COVID-19 Canada map for the infected count using the following:
+
+
+
 `covid_mapca('infectedCount')`
 
-```{R}
-covid_mapca('infectedCount')
 
-```
 
 We can generate the current COVID-19 Canada map for the deceased count using the following:
 
 
 
 `covid_mapca('deceasedCount')`
+```{R}
+covid_mapca('deceasedCount')
 
+
+```
 
 
 
