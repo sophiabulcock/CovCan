@@ -2,7 +2,7 @@
 if(!require(ggplot2)) install.packages("stringr", repos = "http://cran.us.r-project.org")
 if(!require(dplyr)) install.packages("dplyr", repos = "https://github.com/tidyverse/dplyr")
 if(!require(plotly)) install.packages("plotly", repos = "http://cran.us.r-project.org")
-if(!require(httr)) install.packages("httr", repos = "https://httr.r-lib.org")
+if(!require(httr)) install_github("r-lib/httr")
 if(!require(lubridate)) install.packages("lubridate", repos = "https://lubridate.tidyverse.org")
 if(!require(jsonlite)) install.packages("jsonlite", repos = "https://arxiv.org/abs/1403.2805")
 if(!require(tidyverse)) install.packages("tidyverse", repos = "http://tidyverse.tidyverse.org")
