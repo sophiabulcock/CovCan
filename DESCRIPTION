@@ -15,8 +15,6 @@ Imports:
 	dplyr,
 	httr,
 	jsonlite,
-	magrittr,
-	memoise,
 	viridis,
 	usethis,
 	mapcan,
