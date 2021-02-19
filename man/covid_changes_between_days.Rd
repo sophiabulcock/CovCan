@@ -7,11 +7,11 @@
 covid_changes_between_days(day1, day2,region1)
 }
 \arguments{
-\item{day1}{The first date of the bar chart that you wish to visualize and compare. Written in #'yyyy=mm-dd format.}
+\item{day1}{The first date of the bar chart that you wish to visualize and compare. Written in yyyy=mm-dd format.}
 
-\item{day2}{The second date of the bar chart that you wish to visualize and compare. Written #'in yyyy=mm-dd format.}
+\item{day2}{The second date of the bar chart that you wish to visualize and compare. Written in yyyy=mm-dd format.}
 
-\item{region1}{The region whose COVID-19 data you wish to visualize in the this comparative #'bar chart, written in string format.}
+\item{region1}{The region whose COVID-19 data you wish to visualize in the this comparative bar chart, written in string format.}
 
 \item{region2}{to region 16 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
 Defaults to 'NULL'}

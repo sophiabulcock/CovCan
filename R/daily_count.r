@@ -20,7 +20,8 @@ daily_count <- function(){
 
 if(!require(ggplot2)) install.packages("ggplot2", repos = "http://cran.us.r-project.org")
 if(!require(tidyverse)) install.packages("tidyverse", repos = "http://tidyverse.tidyverse.org")
-#source('get_data.r')
+    require(httr)
+    #source('get_data.r')
 
     token="Tow8X4YNqnsWMFGbWxuPynzHh"
     cleaned_data <- Get_data(token)

@@ -7,24 +7,24 @@
 time_series_plot(data, start_date, end_date,region1 )
 }
 \arguments{
-\item{data}{character. The COVID-19 you wish to visualize. Use 'infected count', 'infected', #''deceased count' or
+\item{data}{character. The COVID-19 you wish to visualize. Use 'infected count', 'infected', 'deceased count' or
 'deceased'.}
 
-\item{start_date}{The start date of the time series you wish to visualize. Written in yyyy-mm-#'dd format.}
+\item{start_date}{The start date of the time series you wish to visualize. Written in yyyy-mm-dd format.}
 
-\item{end_date}{The end date of the time series you wish to visualize. Written in yyyy-mm-dd #'format.}
+\item{end_date}{The end date of the time series you wish to visualize. Written in yyyy-mm-dd format.}
 
-\item{region1}{The region you wish to visualize in the this time series plot, written in #'string format.}
+\item{region1}{The region you wish to visualize in the this time series plot, written in string format.}
 
-\item{region2}{to region 16 The other regions you wish to visualize in the this time series #'plot written in string format.
+\item{region2}{to region 16 The other regions you wish to visualize in the this time series plot written in string format.
 Defaults to 'NULL'}
 }
 \value{
-a GG plot time series of the date range, data and region selected
+a GG plot time series of the date range, data and regions selected
 }
 \description{
 This function creates a time series plot using gg plot of the date range
-selected, and plots the number of  people who have died or been infected by COVID-19 in a #'specified region.
+selected, and plots the number of  people who have died or been infected by COVID-19 in a specified region/regions.
 }
 \note{
 Regions must be written in full names

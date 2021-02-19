@@ -7,19 +7,19 @@
 current_data_barchart(data, region1)
 }
 \arguments{
-\item{data}{character. The COVID-19 you wish to visualize. Use 'infected count', 'infected', #''deceased count',
+\item{data}{character. The COVID-19 you wish to visualize. Use 'infected count', 'infected', 'deceased count',
 'deceased', 'both or 'Both'.}
 
-\item{region1}{The region you wish to visualize in the this current data bar chart, written in #'string format.}
+\item{region1}{The region you wish to visualize in the this current data bar chart, written in string format.}
 
-\item{region2}{to region 16 The other regions you wish to visualize in this bar chart written #'in string format.
+\item{region2}{to region 16 The other regions you wish to visualize in this bar chart written in string format.
 Defaults to 'NULL'}
 }
 \value{
 a GG plot bar chart of the current COVID-19 data for the specified regions
 }
 \description{
-This function creates a bar chart plot using gg plot, and plots a bar chart of #'the number of people who have died or been infected by COVID-19 to date in a specified region.
+This function creates a bar chart plot using gg plot, and plots a bar chart of the number of people who have died or been infected by COVID-19 to date in a specified region/regions.
 }
 \note{
 Regions must be written in full names

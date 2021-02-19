@@ -7,18 +7,18 @@
 day_covid_changes(date1,region1)
 }
 \arguments{
-\item{date1}{The date of the bar chart whose new COVID-19 data you wish to visualize. Written #'in yyyy=mm-dd format.}
+\item{date1}{The date of the bar chart whose new COVID-19 data you wish to visualize. Written in yyyy=mm-dd format.}
 
-\item{region1}{The region whose new COVID-19 data you wish to visualize in the this bar chart, #'written in string format.}
+\item{region1}{The region whose new COVID-19 data you wish to visualize in the this bar chart, written in string format.}
 
-\item{region2}{to region 16 The other regions whose new COVID-19 data you wish to visualize in #'the this bar chart, written in string format.
+\item{region2}{to region 16 The other regions whose new COVID-19 data you wish to visualize in the this bar chart, written in string format.
 Defaults to 'NULL'}
 }
 \value{
-Two GG plot bar charts of the number of new infections and deaths, on a specified date #'for the regions selected
+Two GG plot bar charts of the number of new infections and deaths, on a specified date for the regions selected
 }
 \description{
-This function creates a bar chart using gg plot of date selected, and plots the #'number of new people who have died and been infected by COVID-19 in a specified region, on this #'date .
+This function creates a bar chart using gg plot of date selected, and plots the number of new people who have died and been infected by COVID-19 in a specified region, on this #'date .
 }
 \note{
 Regions must be written in full names

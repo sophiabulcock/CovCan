@@ -7,12 +7,14 @@
 covid_mapca(stats,token)
 }
 \arguments{
-\item{token}{API token from api.pify
+\item{token}{API token from api.pify}
+
+\item{the}{data you want to visualize on the map, either 'infectedCount' or 'deceasedCount'
 Defaults to "Tow8X4YNqnsWMFGbWxuPynzHh"}
 }
 \value{
 return a Canada map with select statistics either infected count or deceased count
 }
 \description{
-This function will return a Canada map with select statistics either infected count or deceased count
+This function will return a map of Canada with the selected data of either the current infected count or the current deceased count.
 }
