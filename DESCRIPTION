@@ -15,7 +15,7 @@ Authors@R:
            role = "ctb",
            email = "graham.kerford@gmail.com"))
 Description: What the package does (one paragraph)
-License: MIT
+License: MIT + file LICENSE
 Depends:
 	R (>= 3.2.0)
 Imports:
