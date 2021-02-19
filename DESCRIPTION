@@ -1,0 +1,41 @@
+Package: CovCan
+Title: What the Package Does (One Line, Title Case)
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Yuxuan",
+           family = "Cui",
+           role = c("aut", "cre"),
+           email = "cuiyuuxuan@gmail.com")
+Description: What the package does (one paragraph).
+License: MIT
+Depends:
+	R (>= 3.2.0)
+Imports:
+	ggplot2,
+	dplyr,
+	httr,
+	jsonlite,
+	magrittr,
+	memoise,
+	viridis,
+	usethis,
+	mapcan,
+	lubridate,
+	plotly,
+	tidyverse,
+	jsonlite
+Suggests:
+	knitr,
+	purrr,
+	remotes,
+	rmarkdown,
+	roxygen2,
+	vctrs,
+	testthat (>= 3.0.0)
+VignetteBuilder: 
+    knitr
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Config/testthat/edition: 3
