@@ -13,7 +13,7 @@
 context("current_data_barchart")
 
 
-library(CovCan)
+
 library(testthat)
 
 test_that(

@@ -7,7 +7,7 @@
 context("test for invalid apikeys")
 
 library(testthat)
-library(CovCan)
+
 
 test_that(
   " test for invalid aipkeys",
