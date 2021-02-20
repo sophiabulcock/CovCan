@@ -1,5 +1,5 @@
 ---
-title: "vigneette_withplot"
+title: "vignette_with_plots"
 author: "Yuxuan Graham Sophia"
 date: "18/02/2021"
 output: html_document
@@ -23,7 +23,7 @@ The CovCan package makes getting this information simple, and allows users to:
 
 * Calculate and visualize the daily new infection and death counts
 
-```{R}
+```{R, include=FALSE}
 
 library(devtools)
 
@@ -240,7 +240,7 @@ We can generate a bar graph for both the deceased count and infected count on De
 
 
 
-```{r}
+```{r, fig.width=10,fig.height=11}
 current_data_barchart('both','2020-12-20','Quebec','Ontario')
 
 ```
@@ -296,7 +296,7 @@ We can generate the bar charts to view the number of new COVID-19 infections and
 
 
 
-```{r}
+```{r, fig.width=5,fig.height=8}
 covid_changes_between_days('2020-11-01', '2021-01-06', 'Ontario','Quebec')
 ```
 
@@ -307,7 +307,7 @@ We can generate the bar charts to view the number of new COVID-19 infections and
 
 `covid_changes_between_days('2020-05-18', '2020-05-25', 'Yukon', 'Saskatchewan')`
 
-```{r}
+```{r, fig.width=7,fig.height=8}
 
 covid_changes_between_days('2020-05-18', '2020-05-25', 'Yukon', 'Saskatchewan')
 ```
@@ -332,7 +332,7 @@ We can generate the current COVID-19 Canada map for the deceased count using the
 
 
 `covid_mapca('deceasedCount')`
-```{R}
+```{R, fig.width=10,fig.height=7}
 
 covid_mapca('deceasedCount')
 
