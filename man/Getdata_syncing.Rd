@@ -4,10 +4,10 @@
 \alias{Getdata_syncing}
 \title{Getdata_syncin}
 \usage{
-Get_data(token)
+Getdata_syncing(apikey)
 }
 \arguments{
-\item{token}{API token from api.pify
+\item{apikey}{API token from api.pify
 Defaults to "Tow8X4YNqnsWMFGbWxuPynzHh"}
 }
 \value{

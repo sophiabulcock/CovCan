@@ -4,10 +4,10 @@
 \alias{Get_data}
 \title{Get_data}
 \usage{
-Get_data(token)
+Get_data(apikey)
 }
 \arguments{
-\item{token}{API token from api.pify
+\item{apikey}{API token from api.pify
 Defaults to "Tow8X4YNqnsWMFGbWxuPynzHh"}
 }
 \value{

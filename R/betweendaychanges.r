@@ -7,9 +7,37 @@
 #' @param day1 The first date of the bar chart that you wish to visualize and compare. Written in yyyy=mm-dd format.
 #' @param day2 The second date of the bar chart that you wish to visualize and compare. Written in yyyy=mm-dd format.
 #' @param region1 The region whose COVID-19 data you wish to visualize in the this comparative bar chart, written in string format.
-#' @param region2 to region 16 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' @param region2 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
 #' Defaults to 'NULL'
-#' @usage covid_changes_between_days(day1, day2,region1)
+#' @param region3 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' Defaults to 'NULL'
+#' @param region4 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' Defaults to 'NULL'
+#' @param region5 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' Defaults to 'NULL'
+#' @param region6 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' Defaults to 'NULL'
+#' @param region7 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' Defaults to 'NULL'
+#' @param region8 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' Defaults to 'NULL'
+#' @param region9 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' Defaults to 'NULL'
+#' @param region10 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' Defaults to 'NULL'
+#' @param region11 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' Defaults to 'NULL'
+#' @param region12 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' Defaults to 'NULL'
+#' @param region13 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' Defaults to 'NULL'
+#' @param region14 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' Defaults to 'NULL'
+#' @param region15 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' Defaults to 'NULL'
+#' @param region16 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' Defaults to 'NULL'
+#' @usage covid_changes_between_days(day1, day2, region1, region2=NULL, region3=NULL,region4=NULL,region5=NULL,region6=NULL,region7=NULL,region8=NULL,region9=NULL,region10=NULL,region11=NULL,region12=NULL,region13=NULL,region14=NULL,region15=NULL,region16=NULL)
 #' @return Two GG plot bar charts of the COVID-19 data, for days and regions selected
 #' @note Regions must be written in full names
 
@@ -18,25 +46,13 @@ covid_changes_between_days <- function(day1, day2, region1, region2=NULL, region
                                  ,region13=NULL,region14=NULL,region15=NULL,region16=NULL){
 
 
-# import packages
-
-#
-# install.packages('tidyverse')
-# library(tidyverse)
-# install.packages('stringr')
-# library(stringr)
-# install.packages('ggplot2')
-# library(ggplot2)
-# install.packages('cowplot')
-# library(cowplot)
-
-if(!require(jsonlite)) install.packages('jsonlite', repos='http://cran.rstudio.com/')
-if(!require(ggplot2)) install.packages("ggplot2", repos = "http://cran.us.r-project.org")
-if(!require(stringr)) install.packages("stringr", repos = "http://cran.us.r-project.org")
-if(!require(plotly)) install.packages("plotly", repos = "http://cran.us.r-project.org")
-if(!require(cowplot)) install.packages("cowplot", repos = "	https://wilkelab.org/cowplot/")
-if(!require(tidyverse)) install.packages("tidyverse", repos = "http://tidyverse.tidyverse.org")
-if(!require(ggrepel)) install.packages("ggrepel", repos = "https://github.com/slowkow/ggrepel")
+suppressWarnings(if(!require(jsonlite)) install.packages('jsonlite', repos='http://cran.rstudio.com/'))
+suppressWarnings(if(!require(ggplot2)) install.packages("ggplot2", repos = "http://cran.us.r-project.org"))
+suppressWarnings(if(!require(stringr)) install.packages("stringr", repos = "http://cran.us.r-project.org"))
+suppressWarnings(if(!require(plotly)) install.packages("plotly", repos = "http://cran.us.r-project.org"))
+suppressWarnings(if(!require(cowplot)) install.packages("cowplot", repos = "https://wilkelab.org/cowplot/"))
+suppressWarnings(if(!require(tidyverse)) install.packages("tidyverse", repos ="http://tidyverse.tidyverse.org"))
+suppressWarnings(if(!require(ggrepel)) install.packages("ggrepel", repos = "https://github.com/slowkow/ggrepel"))
 require(httr)
 # if statement checks for correctness of input parameters. If this is not met, the error message is printed out in the else
 if(((is.character(day1))&&(is.character(day2))&&(is.character(region1)))==TRUE){

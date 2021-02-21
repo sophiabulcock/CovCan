@@ -2,38 +2,56 @@
 #'
 #' @description This function creates a bar chart plot using gg plot, and plots a bar chart of the number of people who have died or been infected by COVID-19 to date in a specified region/regions.
 
+#' @param token apikey used to access data'
 #' @param data character. The COVID-19 you wish to visualize. Use 'infected count', 'infected', 'deceased count',
 #' 'deceased', 'both or 'Both'.
 #' @param region1 The region you wish to visualize in the this current data bar chart, written in string format.
-#' @param region2 to region 16 The other regions you wish to visualize in this bar chart written in string format.
+#' @param region2 The other regions you wish to visualize in this bar chart written in string format.
 #' Defaults to 'NULL'
-#' @usage current_data_barchart(data, region1)
+#' @param region3 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' Defaults to 'NULL'
+#' @param region4 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' Defaults to 'NULL'
+#' @param region5 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' Defaults to 'NULL'
+#' @param region6 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' Defaults to 'NULL'
+#' @param region7 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' Defaults to 'NULL'
+#' @param region8 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' Defaults to 'NULL'
+#' @param region9 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' Defaults to 'NULL'
+#' @param region10 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' Defaults to 'NULL'
+#' @param region11 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' Defaults to 'NULL'
+#' @param region12 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' Defaults to 'NULL'
+#' @param region13 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' Defaults to 'NULL'
+#' @param region14 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' Defaults to 'NULL'
+#' @param region15 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' Defaults to 'NULL'
+#' @param region16 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' Defaults to 'NULL'
+#' @usage current_data_barchart(token='4T9GEYHZ7PE9w8H29xynebW3L', data, region1, region2=NULL, region3=NULL,region4=NULL,region5=NULL,region6=NULL,region7=NULL,region8=NULL,region9=NULL,region10=NULL,region11=NULL,region12=NULL,region13=NULL,region14=NULL,region15=NULL,region16=NULL)
 #' @return a GG plot bar chart of the current COVID-19 data for the specified regions
 #' @note Regions must be written in full names
 
-current_data_barchart <- function( data, region1, region2=NULL, region3=NULL,region4=NULL,region5=NULL
+current_data_barchart <- function(token='4T9GEYHZ7PE9w8H29xynebW3L', data, region1, region2=NULL, region3=NULL,region4=NULL,region5=NULL
                                 ,region6=NULL,region7=NULL,region8=NULL,region9=NULL,region10=NULL,region11=NULL,region12=NULL
                                  ,region13=NULL,region14=NULL,region15=NULL,region16=NULL) {
 
 
-# import packages
-
-# install.packages('tidyverse')
-# library(tidyverse)
-# install.packages('stringr')
-# library(stringr)
-# install.packages('ggplot2')
-# library(ggplot2)
-# install.packages('cowplot')
-# library(cowplot)
- if(!require(ggrepel)) install.packages("ggrepel", repos = "https://github.com/slowkow/ggrepel")
-if(!require(jsonlite)) install.packages('jsonlite', repos='http://cran.rstudio.com/')
-if(!require(ggplot2)) install.packages("ggplot2", repos = "http://cran.us.r-project.org")
-if(!require(stringr)) install.packages("stringr", repos = "http://cran.us.r-project.org")
-if(!require(plotly)) install.packages("plotly", repos = "http://cran.us.r-project.org")
-if(!require(cowplot)) install.packages("cowplot", repos = "https://wilkelab.org/cowplot/")
-if(!require(tidyverse)) install.packages("tidyverse", repos = "http://tidyverse.tidyverse.org")
-#source('get_data.r')
+suppressWarnings(if(!require(jsonlite)) install.packages('jsonlite', repos='http://cran.rstudio.com/'))
+suppressWarnings(if(!require(ggplot2)) install.packages("ggplot2", repos = "http://cran.us.r-project.org"))
+suppressWarnings(if(!require(stringr)) install.packages("stringr", repos = "http://cran.us.r-project.org"))
+suppressWarnings(if(!require(plotly)) install.packages("plotly", repos = "http://cran.us.r-project.org"))
+suppressWarnings(if(!require(cowplot)) install.packages("cowplot", repos = "https://wilkelab.org/cowplot/"))
+suppressWarnings(if(!require(tidyverse)) install.packages("tidyverse", repos ="http://tidyverse.tidyverse.org"))
+suppressWarnings(if(!require(ggrepel)) install.packages("ggrepel", repos = "https://github.com/slowkow/ggrepel"))
 
 
 
@@ -46,7 +64,7 @@ which_regions2 = c(region1,region2, region3,region4,region5,region6,region7,regi
 
 # get data from get_newest_data function
 # source('R/get_data.r')
-token="Tow8X4YNqnsWMFGbWxuPynzHh"
+token='4T9GEYHZ7PE9w8H29xynebW3L'
 current_df <- Getdata_syncing(token)
 
 

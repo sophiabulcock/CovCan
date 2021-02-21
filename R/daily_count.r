@@ -12,16 +12,12 @@ daily_count <- function(token="4T9GEYHZ7PE9w8H29xynebW3L"){
     #' @usage daily_count()
     #' @return a data frame with columns: 'region', 'infectedCount', 'deceasedCount', 'date', 'Daily_new_cases', and 'Daily_deaths', 'seven_day_average'.
 
-# import packages
-# install.packages('dplyr')
-# library(dplyr)
-# install.packages('tidyverse')
-# library(tidyverse)
-if(!require(lubridate)) install.packages("lubridate", repos = "https://lubridate.tidyverse.org")
-if(!require(ggplot2)) install.packages("ggplot2", repos = "http://cran.us.r-project.org")
-if(!require(tidyverse)) install.packages("tidyverse", repos = "http://tidyverse.tidyverse.org")
+
+suppressWarnings(if(!require(lubridate)) install.packages("lubridate", repos = "https://lubridate.tidyverse.org"))
+suppressWarnings(if(!require(ggplot2)) install.packages("ggplot2", repos = "http://cran.us.r-project.org"))
+suppressWarnings(if(!require(tidyverse)) install.packages("tidyverse", repos = "http://tidyverse.tidyverse.org"))
     require(httr)
-    #source('get_data.r')
+
 
     cleaned_data <- Get_data(token)
 

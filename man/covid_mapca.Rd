@@ -7,9 +7,9 @@
 covid_mapca(stats,token)
 }
 \arguments{
-\item{token}{API token from api.pify}
+\item{stats}{the data you want to visualize on the map, either 'infectedCount' or 'deceasedCount'}
 
-\item{the}{data you want to visualize on the map, either 'infectedCount' or 'deceasedCount'
+\item{token}{API token from api.pify
 Defaults to "Tow8X4YNqnsWMFGbWxuPynzHh"}
 }
 \value{
