@@ -1,11 +1,11 @@
 # load libraries
-if(!require(ggplot2)) install.packages("stringr", repos = "http://cran.us.r-project.org")
-if(!require(dplyr)) install.packages("dplyr", repos = "https://github.com/tidyverse/dplyr")
-if(!require(plotly)) install.packages("plotly", repos = "http://cran.us.r-project.org")
-if(!require(httr)) install_github("r-lib/httr")
-if(!require(lubridate)) install.packages("lubridate", repos = "https://lubridate.tidyverse.org")
-if(!require(jsonlite)) install.packages("jsonlite", repos = "https://arxiv.org/abs/1403.2805")
-if(!require(tidyverse)) install.packages("tidyverse", repos = "http://tidyverse.tidyverse.org")
+suppressWarnings(if(!require(ggplot2)) install.packages("stringr", repos = "http://cran.us.r-project.org"))
+suppressWarnings(if(!require(dplyr)) install.packages("dplyr", repos = "https://github.com/tidyverse/dplyr"))
+suppressWarnings(if(!require(plotly)) install.packages("plotly", repos = "http://cran.us.r-project.org"))
+suppressWarnings(if(!require(httr)) install_github("r-lib/httr"))
+suppressWarnings(if(!require(lubridate)) install.packages("lubridate", repos = "https://lubridate.tidyverse.org"))
+suppressWarnings(if(!require(jsonlite)) install.packages("jsonlite", repos = "https://arxiv.org/abs/1403.2805"))
+suppressWarnings(if(!require(tidyverse)) install.packages("tidyverse", repos = "http://tidyverse.tidyverse.org"))
 require(httr)
 
 
@@ -19,10 +19,10 @@ Get_data<-function(apikey='4T9GEYHZ7PE9w8H29xynebW3L') {
     #'
     #' @description This function will return a well-formed dataframe that contains basic Covid information
 
-    #' @param token API token from api.pify
+    #' @param apikey API token from api.pify
     #' Defaults to "Tow8X4YNqnsWMFGbWxuPynzHh"
 
-    #' @usage Get_data(token)
+    #' @usage Get_data(apikey)
     #' @return A dataframe with 4 columns region,infectedCount,deceasedCount and date
 
     url<-"https://api.apify.com"
@@ -92,14 +92,13 @@ Getdata_syncing<-function(apikey='4T9GEYHZ7PE9w8H29xynebW3L') {
     #'
     #' @description This function will return a latest veresion of well-formed dataframe that contains basic Covid information
 
-    #' @param token API token from api.pify
+    #' @param apikey API token from api.pify
     #' Defaults to "Tow8X4YNqnsWMFGbWxuPynzHh"
 
-    #' @usage Get_data(token)
+    #' @usage Getdata_syncing(apikey)
     #' @return A dataframe with 4 columns region,infectedCount,deceasedCount and date
 
     url<-"https://api.apify.com"
-#     token='Tow8X4YNqnsWMFGbWxuPynzHh'
     path<-"v2/acts/lukass~covid-cad/run-sync-get-dataset-items"
     params=list(token = apikey,limit=1)
     raw.result=GET(url=url,path=path,query=params)

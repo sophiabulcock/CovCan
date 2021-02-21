@@ -8,17 +8,17 @@
 
 # load dataset
 
-if(!require(jsonlite)) install.packages('jsonlite', repos='http://cran.rstudio.com/')
-if(!require(viridis)) install.packages("viridis", repos = "https://github.com/sjmgarnier/viridis")
-if(!require(mapcan)) install.packages("mapcan", repos = "https://github.com/mccormackandrew/mapcan")
+suppressWarnings(if(!require(jsonlite)) install.packages('jsonlite', repos='http://cran.rstudio.com/'))
+suppressWarnings(if(!require(viridis)) install.packages("viridis", repos = "https://github.com/sjmgarnier/viridis"))
+suppressWarnings(if(!require(mapcan)) install.packages("mapcan", repos = "https://github.com/mccormackandrew/mapcan"))
 require(httr)
 
 covid_mapca<-function(stats,token="4T9GEYHZ7PE9w8H29xynebW3L"){
     #' covid_mapca
     #'
     #' @description This function will return a map of Canada with the selected data of either the current infected count or the current deceased count.
+    #' @param stats the data you want to visualize on the map, either 'infectedCount' or 'deceasedCount'
     #' @param token API token from api.pify
-    #' @param the data you want to visualize on the map, either 'infectedCount' or 'deceasedCount'
     #' Defaults to "Tow8X4YNqnsWMFGbWxuPynzHh"
 
     #' @usage covid_mapca(stats,token)
@@ -33,7 +33,8 @@ covid_mapca<-function(stats,token="4T9GEYHZ7PE9w8H29xynebW3L"){
     if(stats=="infectedCount" |stats=="deceasedCount"){
         name<-parameter[[stats]]
          newest = Getdata_syncing(token)
-        pr_geographic <- mapcan::mapcan(boundaries = province,type = standard)
+        #pr_geographic <- mapcan::mapcan(boundaries = province,type = standard)
+        pr_geographic <- mapcan(boundaries = province,type = standard)
         pr_geographic <- left_join(pr_geographic, newest, by = c("pr_english" = "region"))
         pr_geographic$group<-as.numeric(pr_geographic$group)
         cnames <-aggregate(cbind(long, lat, group) ~pr_english, data=pr_geographic,

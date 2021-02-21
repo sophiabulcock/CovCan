@@ -4,7 +4,7 @@
 \alias{covid_changes_between_days}
 \title{Covid Changes Between Days}
 \usage{
-covid_changes_between_days(day1, day2,region1)
+covid_changes_between_days(day1, day2, region1, region2=NULL, region3=NULL,region4=NULL,region5=NULL,region6=NULL,region7=NULL,region8=NULL,region9=NULL,region10=NULL,region11=NULL,region12=NULL,region13=NULL,region14=NULL,region15=NULL,region16=NULL)
 }
 \arguments{
 \item{day1}{The first date of the bar chart that you wish to visualize and compare. Written in yyyy=mm-dd format.}
@@ -13,7 +13,49 @@ covid_changes_between_days(day1, day2,region1)
 
 \item{region1}{The region whose COVID-19 data you wish to visualize in the this comparative bar chart, written in string format.}
 
-\item{region2}{to region 16 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+\item{region2}{The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+Defaults to 'NULL'}
+
+\item{region3}{The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+Defaults to 'NULL'}
+
+\item{region4}{The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+Defaults to 'NULL'}
+
+\item{region5}{The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+Defaults to 'NULL'}
+
+\item{region6}{The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+Defaults to 'NULL'}
+
+\item{region7}{The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+Defaults to 'NULL'}
+
+\item{region8}{The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+Defaults to 'NULL'}
+
+\item{region9}{The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+Defaults to 'NULL'}
+
+\item{region10}{The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+Defaults to 'NULL'}
+
+\item{region11}{The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+Defaults to 'NULL'}
+
+\item{region12}{The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+Defaults to 'NULL'}
+
+\item{region13}{The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+Defaults to 'NULL'}
+
+\item{region14}{The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+Defaults to 'NULL'}
+
+\item{region15}{The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+Defaults to 'NULL'}
+
+\item{region16}{The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
 Defaults to 'NULL'}
 }
 \value{
