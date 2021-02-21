@@ -30,6 +30,8 @@ Sophia:
 4. Each member will add a docstring to each of the functions they were responsible for.
 5. A specified member will make a test suite function to test that all the test functions work as expected
 
+  - Sophia did this
+
 6. Set up package the way we want, appropriately laid out for a test build
 7. Yuxian will test to see if the build works, with Sophia and Graham on video chat
 8. Each member will then contribute evenly to building the package vignette.

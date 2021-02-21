@@ -1,7 +1,7 @@
 
 
 
-daily_count <- function(token="4T9GEYHZ7PE9w8H29xynebW3L"){
+daily_count <- function(){
 
 
  #' Daily Counts
@@ -19,6 +19,7 @@ suppressWarnings(if(!require(tidyverse)) install.packages("tidyverse", repos = "
     require(httr)
 
 
+    token="4T9GEYHZ7PE9w8H29xynebW3L"
     cleaned_data <- Get_data(token)
 
     # Add column for daily case counts
