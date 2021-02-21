@@ -21,7 +21,15 @@ load_all()
 ```
 
 ```{r}
-check()
+release(pkg = ".", check = FALSE)
+```
+```{r}
+check_rhub()
+```
+
+
+```{r}
+release_checks()
 ```
 
 ```{r}
