@@ -4,10 +4,42 @@ author: "Yuxuan Graham Sophia"
 date: "18/02/2021"
 output: html_document
 ---
+```{r}
+installed.packages('devtools')
+library(devtools)
+```
+```{r}
+devtools::install()
+```
+```{r}
+library(devtools)
+```
+
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+load_all()
 ```
+
+```{r}
+check()
+```
+
+```{r}
+library(CovCan)
+CovCan::Get_data('Tow8X4YNqnsWMFGbWxuPynzHh')
+```
+
+```{r}
+library(CovCan)
+CovCan::daily_count('Tow8X4YNqnsWMFGbWxuPynzHh')
+```
+
+```{r}
+library(CovCan)
+CovCan::covid_mapca('infectedCount','Tow8X4YNqnsWMFGbWxuPynzHh')
+```
+
+
 # Introduction to CovCan
 
 
@@ -26,7 +58,7 @@ The CovCan package makes getting this information simple, and allows users to:
 ```{R}
 
 library(CovCan)
-devtools::load_all()
+
 ```
 
 
@@ -191,7 +223,8 @@ We can generate the time series plot for the deceased count in Saskatchewan betw
 `time_series_plot('deceased', '2020-08-01','2020-08-04', 'Saskatchewan')`
 
 ```{R}
-time_series_plot('deceased', '2020-08-01','2020-09-04', 'Alberta')
+options(warn=-1)
+time_series_plot('deceased', '2020-08-01','2020-08-04', 'Saskatchewan')
 
 ```
 
@@ -310,19 +343,23 @@ Users can produce a real-time geographical map of Canada with the infected count
 
 
 We can generate the current COVID-19 Canada map for the infected count using the following:
+
+
+
 `covid_mapca('infectedCount')`
 
-```{R}
-covid_mapca('infectedCount')
 
-```
 
 We can generate the current COVID-19 Canada map for the deceased count using the following:
 
 
 
 `covid_mapca('deceasedCount')`
+```{R}
+covid_mapca('deceasedCount')
 
+
+```
 
 
 
