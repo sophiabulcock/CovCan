@@ -2,8 +2,13 @@
 #' Covid Changes Between Days
 #'
 #' @description This function creates a bar chart using gg plot of the two dates selected, and #'plots the number of people who have died and been infected by COVID-19 in a specified region, #'on these two dates.
-
-
+#' @import jsonlite
+#' @import ggplot2
+#' @import stringr
+#' @import plotly
+#' @import cowplot
+#' @import tidyverse
+#' @import ggrepel
 #' @param day1 The first date of the bar chart that you wish to visualize and compare. Written in yyyy=mm-dd format.
 #' @param day2 The second date of the bar chart that you wish to visualize and compare. Written in yyyy=mm-dd format.
 #' @param region1 The region whose COVID-19 data you wish to visualize in the this comparative bar chart, written in string format.

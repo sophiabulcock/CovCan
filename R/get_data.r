@@ -19,6 +19,13 @@ Get_data<-function(apikey='4T9GEYHZ7PE9w8H29xynebW3L') {
     #'
     #' @description This function will return a well-formed dataframe that contains basic Covid information
 
+    #' @import jsonlite
+    #' @import ggplot2
+    #' @import stringr
+    #' @import plotly
+    #' @import cowplot
+    #' @import tidyverse
+    #' @import ggrepel
     #' @param apikey API token from api.pify
     #' Defaults to "Tow8X4YNqnsWMFGbWxuPynzHh"
 

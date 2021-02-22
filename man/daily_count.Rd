@@ -11,5 +11,4 @@ a data frame with columns: 'region', 'infectedCount', 'deceasedCount', 'date', '
 }
 \description{
 This function creates a calculates the daily new cases and death counts from the pre-existing requesting data from the covid dataset.
-Defaults to 'NULL'
 }

@@ -15,7 +15,10 @@ require(httr)
 
 covid_mapca<-function(stats,token="4T9GEYHZ7PE9w8H29xynebW3L"){
     #' covid_mapca
-    #'
+    #' @import jsonlite
+    #' @import viridis
+    #' @import mapcan
+
     #' @description This function will return a map of Canada with the selected data of either the current infected count or the current deceased count.
     #' @param stats the data you want to visualize on the map, either 'infectedCount' or 'deceasedCount'
     #' @param token API token from api.pify

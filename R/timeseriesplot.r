@@ -2,6 +2,14 @@
 #'
 #' @description This function creates a time series plot using gg plot of the date range
 #' selected, and plots the number of  people who have died or been infected by COVID-19 in a specified region/regions.
+#'
+#' @import jsonlite
+#' @import ggplot2
+#' @import stringr
+#' @import plotly
+#' @import cowplot
+#' @import tidyverse
+#' @import ggrepel
 #' @param apikey API token from api.pify
 #' @param data character. The COVID-19 you wish to visualize. Use 'infected count', 'infected', 'deceased count' or
 #' 'deceased'.

@@ -1,7 +1,13 @@
 #' Current Data Bar CHart
 #'
 #' @description This function creates a bar chart plot using gg plot, and plots a bar chart of the number of people who have died or been infected by COVID-19 to date in a specified region/regions.
-
+#' @import jsonlite
+#' @import ggplot2
+#' @import stringr
+#' @import plotly
+#' @import cowplot
+#' @import tidyverse
+#' @import ggrepel
 #' @param token apikey used to access data'
 #' @param data character. The COVID-19 you wish to visualize. Use 'infected count', 'infected', 'deceased count',
 #' 'deceased', 'both or 'Both'.
