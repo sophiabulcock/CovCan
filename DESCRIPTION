@@ -1,6 +1,6 @@
 Package: CovCan
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.9000
+Title: Canadian Covid-19 statistics and visulization package
+Version: 0.1.0000
 Authors@R: 
   c(person(given = "Yuxuan",
            family = "Cui",
