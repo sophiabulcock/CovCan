@@ -13,3 +13,10 @@ expect_true(!is.null(covid_changes_between_days('2020-11-05', '2020-11-07', 'Bri
 
 
 
+testVirtual()
+?Get_data
+?test
+test()
+Get_data()
+findFn("Get_datal")
+install.packages('CovCan')

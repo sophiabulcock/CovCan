@@ -1,0 +1,373 @@
+---
+title: "vigneette_withplot"
+author: "Yuxuan Graham Sophia"
+date: "18/02/2021"
+output: html_document
+---
+```{r}
+installed.packages('devtools')
+library(devtools)
+```
+```{r}
+devtools::install()
+```
+```{r}
+library(devtools)
+```
+
+
+```{r setup, include=FALSE}
+load_all()
+```
+
+```{r}
+release(pkg = ".", check = FALSE)
+```
+```{r}
+check_rhub()
+```
+
+
+```{r}
+release_checks()
+```
+
+```{r}
+library(CovCan)
+CovCan::Get_data('Tow8X4YNqnsWMFGbWxuPynzHh')
+```
+
+```{r}
+library(CovCan)
+CovCan::daily_count('Tow8X4YNqnsWMFGbWxuPynzHh')
+```
+
+```{r}
+library(CovCan)
+CovCan::covid_mapca('infectedCount','Tow8X4YNqnsWMFGbWxuPynzHh')
+```
+
+
+# Introduction to CovCan
+
+
+It is important to understand the impact COVID-19 has had on Canada as a whole. We can get the historical and current COVID-19 infection and death counts for Canadian regions with the [Apify Covid Canada API](https://apify.com/lukass/covid-cad/api "Apify Covid Canada API"). This API gets the data from the [Government of Canada Coronavirus disease (COVID-19): Outbreak update page](https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection.html "Government of Canada Coronavirus disease (COVID-19): Outbreak update page"). 
+
+
+
+The CovCan package makes getting this information simple, and allows users to:
+
+* Visualize the current and historical COVID-19 data in table format
+
+* Visualize the current and historical COVID-19 data in charts, using the ggplot package
+
+* Calculate and visualize the daily new infection and death counts
+
+```{R}
+
+library(CovCan)
+
+```
+
+
+
+
+## CovCan Functions
+
+
+# Generate the historical COVID-19 data with the `Get_data()` function
+
+
+
+`Get_data()` allows users to generate a data frame that consists of the historical COVID-19 data, for all regions of Canada. These regions are:
+
+* Alberta
+
+* British Columbia
+
+* Canada (as a whole)
+
+* Manitoba
+
+* New Brunswick
+
+* Newfoundland and Labrador
+
+* Northwest Territories
+
+* Nova Scotia
+
+* Nunavut
+
+* Ontario
+
+* Prince Edward Island
+
+* Quebec
+
+* Repatriated travellers (travellers returned home)
+
+* Saskatchewan
+
+* Yukon
+
+
+
+
+
+This data frame consists of the following columns. 'region' denoting the region of Canada. 'infectedCount' denoting the running total/number of people infected with COVID-19. 'deceasedCount' denoting the running total/number of people deceased from COVID-19, and 'date' denoting the date these recordings were made. This function takes no arguments, the user can simply call it to generate the data frame and then manipulate in a way of their choosing. 
+
+
+
+## Generate the current day COVID-19 data with the `Getdata_syncing()` function
+
+
+
+`Getdata_syncing()` allows users to generate a data frame that consists of the current day COVID-19 data, for all regions of Canada, much like the `Get_data()` function. These regions are:
+
+
+
+* Alberta
+
+* British Columbia
+
+* Canada (as a whole)
+
+* Manitoba
+
+* New Brunswick
+
+* Newfoundland and Labrador
+
+* Northwest Territories
+
+* Nova Scotia
+
+* Nunavut
+
+* Ontario
+
+* Prince Edward Island
+
+* Quebec
+
+* Repatriated travellers (travellers returned home)
+
+* Saskatchewan
+
+* Yukon
+
+
+
+This data frame consists of the following columns. 'region' denoting the region of Canada. 'infectedCount' denoting the running total/number of people infected with COVID-19. 'deceasedCount' denoting the running total/number of people deceased from COVID-19. This function takes no arguments, the user can simply call it to generate the data frame and then manipulate in a way of their choosing. 
+
+
+
+ calculates the daily new cases and death counts from the pre-existing requesting data from the covid dataset
+
+
+
+## Calculate the daily new infected counts and death counts using `daily_count()` function
+
+
+
+The `daily_count()` function allows users to use the data generated  above in `Get_data()` function, and returns a data frame exactly like the `Get_data()` function , but with additional columns. These columns are as follows. 'Daily_new_cases' denotes the amount of new COVID-19 cases recorded since the previous day.  'Daily_deaths' denotes the amount of new COVID-19 deaths recorded since the previous day. 'seven_day_average' denotes _______
+
+
+
+
+
+## Produce a time series plot for infected or deceased between selected dates for selected regions of Canada using `time_series_plot()`
+
+
+
+Users can produce a gg plot time series line graph for selected dates and regions of the historical COVID-19 data using the `time_series_plot()` function. This function uses the  data frame produced by the `Get_data()` function. The first argument is the data you would like to see represented in the graph, being the deceased count or infected count. The second argument is the plot start date, written in yyyy-mm-dd form. The third argument is the plot end date, written in  yyyy-mm-dd form. The fourth and subsequent arguments refer to the regions for which you would like to see the time series plot. These can be any of the regions produced by the `Get_data()` function. One region is required, and users can input up to 16 regions. 
+
+
+
+We can generate the time series plot for the infected count in British Columbia, Alberta and Ontario between June 17th 2020 and January 1st 2021 using the following:
+
+
+
+`time_series_plot('infected count', '2020-06-17','2021-01-01', 'British Columbia', 'Alberta' , 'Ontario')`
+
+
+```{r}
+options(warn=-1)
+time_series_plot('infected count', '2020-06-17','2021-01-01', 'British Columbia', 'Alberta' , 'Ontario')
+
+```
+
+
+
+We can generate the time series plot for the deceased count in British Columbia and all of Canada (as a whole) between January 20th 2021 and February 1st 2021 using the following:
+
+
+
+`time_series_plot('deceased count', '2021-01-20','2021-02-01', 'British Columbia', 'Canada')`
+
+```{R}
+options(warn=-1)
+time_series_plot('deceased count', '2021-01-20','2021-02-01', 'British Columbia', 'Canada')
+
+```
+
+We can generate the time series plot for the infected count in Saskatchewan between August 1st 2020 and August 4th 2020 using the following:
+
+
+
+`time_series_plot('infected', '2020-08-01','2020-08-04', 'Saskatchewan')`
+
+
+```{r}
+options(warn=-1)
+time_series_plot('infected', '2020-08-01','2020-08-04', 'Saskatchewan')
+```
+
+We can generate the time series plot for the deceased count in Saskatchewan between August 1st 2020 and August 4th 2020 using the following:
+
+
+
+`time_series_plot('deceased', '2020-08-01','2020-08-04', 'Saskatchewan')`
+
+```{R}
+options(warn=-1)
+time_series_plot('deceased', '2020-08-01','2020-08-04', 'Saskatchewan')
+
+```
+
+## Produce a bar chart for infected or deceased (or both) for a selected date for selected regions of Canada using `current_data_barchart()`
+
+
+
+Users can produce a bar chart for a selected date and multiple regions of the historical COVID-19 data using the `current_data_barchart()` function. This function uses the  data frame produced by the `Getdata_syncing()` function. The first argument is the data you would like to see represented in the graph, being the deceased count, infected count or both. The second argument is date for which you would like to see the data, written in yyyy-mm-dd form. The third and subsequent arguments refer to the regions for which you would like to see the time series plot. These can be any of the regions produced by the `Get_data()` function. One region is required, and users can input up to 16 regions. 
+
+
+
+We can generate a bar graph for the infected count on June 18th 2020 for Quebec, Saskatchewan and Manitoba using the following:
+
+
+
+`current_data_barchart('infected', '2020-06-18', 'Quebec', 'Saskatchewan', 'Manitoba)`
+
+```{r}
+current_data_barchart('infected', '2020-06-18', 'Quebec', 'Saskatchewan', 'Manitoba')
+```
+
+We can generate a bar graph for the deceased count on July 4th 2020 for Quebec and Alberta using the following:
+
+
+
+`current_data_barchart('deceased count', '2020-07-04', 'Quebec', 'Alberta')`
+
+```{R}
+current_data_barchart('deceased count', '2020-07-04', 'Quebec', 'Alberta')
+```
+
+
+
+We can generate a bar graph for both the deceased count and infected count on December 20th 2020 for Quebec using the following:
+
+
+
+`current_data_barchart('both', '2020-12-20', 'Quebec')`
+
+
+
+```{r}
+current_data_barchart('both','2020-12-20','Quebec')
+
+```
+
+We can generate a bar graph for the deceased count on January 12th 2021 for all of Canada and Nova Scotia using the following:
+
+
+
+`current_data_barchart('deceased', '2021-01-12', 'Canada', 'Nova Scotia')`
+
+```{r}
+current_data_barchart('deceased', '2021-01-12', 'Canada', 'Nova Scotia')
+
+```
+
+
+## Produce a bar chart to view the amount of new COVID-19 deaths and infections for a selected date and selected regions of Canada using `day_covid_changes()`
+
+
+
+Users can produce a bar chart for a selected date and multiple regions of the amount of new COVID-19 infections and deaths using the `day_covid_changes()` function. This function uses the  data frame produced by the `daily_count()` function. The first argument is date for which you would like to see the new COVID-19 data, written in yyyy-mm-dd form. The second and subsequent arguments refer to the regions for which you would like to see the new COVID-19 data bar chart. These can be any of the regions produced by the `Get_data()` function. One region is required, and users can input up to 16 regions. 
+
+
+
+We can generate a bar chart to view the number of new COVID-19 infections and deaths on April 20th 2020 in Ontario using the following:
+
+
+
+`day_covid_changes('2020-04-20', 'Ontario')`
+
+
+
+
+We can generate a bar chart to view the number of new COVID-19 infections and deaths on July 29th 2020 in Ontario, Quebec and Canada as a whole using the following:
+
+
+
+`day_covid_changes('2020-07-29', 'Ontario', 'Quebec', 'Canada')`
+
+
+
+## Produce multiple bar charts to view the difference between the amount of new people infected and deceased from COVID-19 for two dates using `covid_changes_between_days()`
+
+
+
+Users can produce mutliple bar charts to view the amount of new people infected and deceased from COVID-19 between 2 days, using the `covid_changes_between_days()` function. This function uses the data frame produced by the `daily_count()` function. The first argument is first date for which you would like to see the new COVID-19 data, written in yyyy-mm-dd form. The second argument is other date for which you would like to see the new data, written in yyyy-mm-dd form. The third and subsequent arguments refer to the regions for which you would like to see the new COVID-19 data bar charts. These can be any of the regions produced by the `Get_data()` function. One region is required, and users can input up to 16 regions. 
+
+
+
+We can generate the bar charts to view the number of new COVID-19 infections and deaths on January 1st and January 3rd 2021 in Ontario using the following:
+
+
+
+`covid_changes_between_days('2021-01-01', '2021-01-03', 'Ontario')`
+
+
+
+We can generate the bar charts to view the number of new COVID-19 infections and deaths on May 18th and May 29th 2020 in the Yukon and Saskatchewan, using the following:
+
+
+
+`covid_changes_between_days('2020-05-18', '2020-05-29', 'Yukon', 'Saskatchewan')`
+
+```{r}
+
+covid_changes_between_days('2020-05-18', '2020-05-29', 'Yukon', 'Saskatchewan')
+```
+
+## Produce a visual geographical map of Canada with the current infected count or deceased count for each region using `covid_mapca()`
+
+
+
+Users can produce a real-time geographical map of Canada with the infected count or deceased count for each region using the function `covid_mapca()`. This function uses the data frame from the `Getdata_syncing()` function. The first argument is the data that you would like to see, either 'infected count' or 'deceased count'. 
+
+
+We can generate the current COVID-19 Canada map for the infected count using the following:
+
+
+
+`covid_mapca('infectedCount')`
+
+
+
+We can generate the current COVID-19 Canada map for the deceased count using the following:
+
+
+
+`covid_mapca('deceasedCount')`
+```{R}
+covid_mapca('deceasedCount')
+
+
+```
+
+
+

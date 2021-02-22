@@ -38,7 +38,7 @@
 #' @usage day_covid_changes(date1, region1, region2=NULL, region3=NULL,region4=NULL,region5=NULL,region6=NULL,region7=NULL,region8=NULL,region9=NULL,region10=NULL,region11=NULL,region12=NULL, region13=NULL,region14=NULL,region15=NULL, region16=NULL)
 #' @return Two GG plot bar charts of the number of new infections and deaths, on a specified date for the regions selected
 #' @note Regions must be written in full names
-
+#' @export
 day_covid_changes <- function(date1, region1, region2=NULL, region3=NULL,region4=NULL,region5=NULL
                                 ,region6=NULL,region7=NULL,region8=NULL,region9=NULL,region10=NULL,region11=NULL,region12=NULL, region13=NULL,region14=NULL,region15=NULL, region16=NULL
                                ){

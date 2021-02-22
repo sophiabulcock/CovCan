@@ -40,7 +40,7 @@
 #' @usage covid_changes_between_days(day1, day2, region1, region2=NULL, region3=NULL,region4=NULL,region5=NULL,region6=NULL,region7=NULL,region8=NULL,region9=NULL,region10=NULL,region11=NULL,region12=NULL,region13=NULL,region14=NULL,region15=NULL,region16=NULL)
 #' @return Two GG plot bar charts of the COVID-19 data, for days and regions selected
 #' @note Regions must be written in full names
-
+#' @export
 covid_changes_between_days <- function(day1, day2, region1, region2=NULL, region3=NULL,region4=NULL,region5=NULL
                                 ,region6=NULL,region7=NULL,region8=NULL,region9=NULL,region10=NULL,region11=NULL,region12=NULL
                                  ,region13=NULL,region14=NULL,region15=NULL,region16=NULL){

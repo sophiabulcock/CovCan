@@ -24,7 +24,7 @@ Get_data<-function(apikey='4T9GEYHZ7PE9w8H29xynebW3L') {
 
     #' @usage Get_data(apikey)
     #' @return A dataframe with 4 columns region,infectedCount,deceasedCount and date
-
+    #' @export
     url<-"https://api.apify.com"
     path<-"v2/acts/lukass~covid-cad/run-sync-get-dataset-items"
     params=list(token =apikey,limit=1)

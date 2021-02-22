@@ -11,7 +11,7 @@ daily_count <- function(){
     #' Defaults to 'NULL'
     #' @usage daily_count()
     #' @return a data frame with columns: 'region', 'infectedCount', 'deceasedCount', 'date', 'Daily_new_cases', and 'Daily_deaths', 'seven_day_average'.
-
+    #' @export
 
 suppressWarnings(if(!require(lubridate)) install.packages("lubridate", repos = "https://lubridate.tidyverse.org"))
 suppressWarnings(if(!require(ggplot2)) install.packages("ggplot2", repos = "http://cran.us.r-project.org"))
