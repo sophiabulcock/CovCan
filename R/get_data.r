@@ -22,7 +22,6 @@ Get_data<-function(apikey='4T9GEYHZ7PE9w8H29xynebW3L') {
     #' @import jsonlite
     #' @import ggplot2
     #' @import stringr
-    #' @import plotly
     #' @import cowplot
     #' @import tidyverse
     #' @import ggrepel

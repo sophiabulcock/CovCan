@@ -5,7 +5,6 @@
 #' @import jsonlite
 #' @import ggplot2
 #' @import stringr
-#' @import plotly
 #' @import cowplot
 #' @import tidyverse
 #' @import ggrepel
