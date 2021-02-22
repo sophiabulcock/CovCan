@@ -1,12 +1,3 @@
-# load libraries
-suppressWarnings(if(!require(ggplot2)) install.packages("stringr", repos = "http://cran.us.r-project.org"))
-suppressWarnings(if(!require(dplyr)) install.packages("dplyr", repos = "https://github.com/tidyverse/dplyr"))
-suppressWarnings(if(!require(plotly)) install.packages("plotly", repos = "http://cran.us.r-project.org"))
-suppressWarnings(if(!require(httr)) install_github("r-lib/httr"))
-suppressWarnings(if(!require(lubridate)) install.packages("lubridate", repos = "https://lubridate.tidyverse.org"))
-suppressWarnings(if(!require(jsonlite)) install.packages("jsonlite", repos = "https://arxiv.org/abs/1403.2805"))
-suppressWarnings(if(!require(tidyverse)) install.packages("tidyverse", repos = "http://tidyverse.tidyverse.org"))
-require(httr)
 
 
 # # token from api.apify
@@ -33,6 +24,16 @@ Get_data<-function(apikey='4T9GEYHZ7PE9w8H29xynebW3L') {
     #' @usage Get_data(apikey)
     #' @return A dataframe with 4 columns region,infectedCount,deceasedCount and date
     #' @export
+  # load libraries
+  suppressWarnings(if(!require(ggplot2)) install.packages("stringr", repos = "http://cran.us.r-project.org"))
+  suppressWarnings(if(!require(dplyr)) install.packages("dplyr", repos = "https://github.com/tidyverse/dplyr"))
+  suppressWarnings(if(!require(plotly)) install.packages("plotly", repos = "http://cran.us.r-project.org"))
+  suppressWarnings(if(!require(httr)) install_github("r-lib/httr"))
+  suppressWarnings(if(!require(lubridate)) install.packages("lubridate", repos = "https://lubridate.tidyverse.org"))
+  suppressWarnings(if(!require(jsonlite)) install.packages("jsonlite", repos = "https://arxiv.org/abs/1403.2805"))
+  suppressWarnings(if(!require(tidyverse)) install.packages("tidyverse", repos = "http://tidyverse.tidyverse.org"))
+  require(httr)
+
     url<-"https://api.apify.com"
     path<-"v2/acts/lukass~covid-cad/run-sync-get-dataset-items"
     params=list(token =apikey,limit=1)
@@ -91,7 +92,6 @@ Get_data<-function(apikey='4T9GEYHZ7PE9w8H29xynebW3L') {
 
 
 }
-
 
 
 # get newest dataset
