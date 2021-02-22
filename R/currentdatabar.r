@@ -8,6 +8,7 @@
 #' @import cowplot
 #' @import tidyverse
 #' @import ggrepel
+#'
 #' @param token apikey used to access data'
 #' @param data character. The COVID-19 you wish to visualize. Use 'infected count', 'infected', 'deceased count',
 #' 'deceased', 'both or 'Both'.
