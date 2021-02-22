@@ -18,13 +18,14 @@ Get_data<-function(apikey='4T9GEYHZ7PE9w8H29xynebW3L') {
     #' Get_data
     #'
     #' @description This function will return a well-formed dataframe that contains basic Covid information
-
+    #' @importFrom lubridate ymd_hms
     #' @import jsonlite
     #' @import ggplot2
     #' @import stringr
     #' @import cowplot
     #' @import tidyverse
     #' @import ggrepel
+    #' @import httr
     #' @param apikey API token from api.pify
     #' Defaults to "Tow8X4YNqnsWMFGbWxuPynzHh"
 
@@ -100,7 +101,7 @@ Getdata_syncing<-function(apikey='4T9GEYHZ7PE9w8H29xynebW3L') {
 
     #' @param apikey API token from api.pify
     #' Defaults to "Tow8X4YNqnsWMFGbWxuPynzHh"
-
+    #' @import httr
     #' @usage Getdata_syncing(apikey)
     #' @return A dataframe with 4 columns region,infectedCount,deceasedCount and date
 
