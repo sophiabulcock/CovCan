@@ -26,6 +26,8 @@ Get_data<-function(apikey='4T9GEYHZ7PE9w8H29xynebW3L') {
     #' @import tidyverse
     #' @import ggrepel
     #' @import httr
+    #' @import dpylr
+    #' @import tidyverse
     #' @param apikey API token from api.pify
     #' Defaults to "Tow8X4YNqnsWMFGbWxuPynzHh"
 
