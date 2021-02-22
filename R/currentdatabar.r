@@ -1,7 +1,13 @@
 #' Current Data Bar CHart
 #'
 #' @description This function creates a bar chart plot using gg plot, and plots a bar chart of the number of people who have died or been infected by COVID-19 to date in a specified region/regions.
-
+#' @import jsonlite
+#' @import ggplot2
+#' @import stringr
+#' @import cowplot
+#' @import tidyverse
+#' @import ggrepel
+#'
 #' @param token apikey used to access data'
 #' @param data character. The COVID-19 you wish to visualize. Use 'infected count', 'infected', 'deceased count',
 #' 'deceased', 'both or 'Both'.
@@ -39,6 +45,7 @@
 #' @usage current_data_barchart(token='4T9GEYHZ7PE9w8H29xynebW3L', data, region1, region2=NULL, region3=NULL,region4=NULL,region5=NULL,region6=NULL,region7=NULL,region8=NULL,region9=NULL,region10=NULL,region11=NULL,region12=NULL,region13=NULL,region14=NULL,region15=NULL,region16=NULL)
 #' @return a GG plot bar chart of the current COVID-19 data for the specified regions
 #' @note Regions must be written in full names
+#' @export
 
 current_data_barchart <- function(token='4T9GEYHZ7PE9w8H29xynebW3L', data, region1, region2=NULL, region3=NULL,region4=NULL,region5=NULL
                                 ,region6=NULL,region7=NULL,region8=NULL,region9=NULL,region10=NULL,region11=NULL,region12=NULL

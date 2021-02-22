@@ -1,12 +1,3 @@
-# load libraries
-suppressWarnings(if(!require(ggplot2)) install.packages("stringr", repos = "http://cran.us.r-project.org"))
-suppressWarnings(if(!require(dplyr)) install.packages("dplyr", repos = "https://github.com/tidyverse/dplyr"))
-suppressWarnings(if(!require(plotly)) install.packages("plotly", repos = "http://cran.us.r-project.org"))
-suppressWarnings(if(!require(httr)) install_github("r-lib/httr"))
-suppressWarnings(if(!require(lubridate)) install.packages("lubridate", repos = "https://lubridate.tidyverse.org"))
-suppressWarnings(if(!require(jsonlite)) install.packages("jsonlite", repos = "https://arxiv.org/abs/1403.2805"))
-suppressWarnings(if(!require(tidyverse)) install.packages("tidyverse", repos = "http://tidyverse.tidyverse.org"))
-require(httr)
 
 
 # # token from api.apify
@@ -18,12 +9,30 @@ Get_data<-function(apikey='4T9GEYHZ7PE9w8H29xynebW3L') {
     #' Get_data
     #'
     #' @description This function will return a well-formed dataframe that contains basic Covid information
-
+    #' @importFrom lubridate ymd_hms
+    #' @import jsonlite
+    #' @import ggplot2
+    #' @import stringr
+    #' @import cowplot
+    #' @import tidyverse
+    #' @import ggrepel
+    #' @import httr
+    #' @import tidyverse
     #' @param apikey API token from api.pify
     #' Defaults to "Tow8X4YNqnsWMFGbWxuPynzHh"
 
     #' @usage Get_data(apikey)
     #' @return A dataframe with 4 columns region,infectedCount,deceasedCount and date
+    #' @export
+  # load libraries
+  suppressWarnings(if(!require(ggplot2)) install.packages("stringr", repos = "http://cran.us.r-project.org"))
+  suppressWarnings(if(!require(dplyr)) install.packages("dplyr", repos = "https://github.com/tidyverse/dplyr"))
+  suppressWarnings(if(!require(plotly)) install.packages("plotly", repos = "http://cran.us.r-project.org"))
+  suppressWarnings(if(!require(httr)) install_github("r-lib/httr"))
+  suppressWarnings(if(!require(lubridate)) install.packages("lubridate", repos = "https://lubridate.tidyverse.org"))
+  suppressWarnings(if(!require(jsonlite)) install.packages("jsonlite", repos = "https://arxiv.org/abs/1403.2805"))
+  suppressWarnings(if(!require(tidyverse)) install.packages("tidyverse", repos = "http://tidyverse.tidyverse.org"))
+  require(httr)
 
     url<-"https://api.apify.com"
     path<-"v2/acts/lukass~covid-cad/run-sync-get-dataset-items"
@@ -38,7 +47,7 @@ Get_data<-function(apikey='4T9GEYHZ7PE9w8H29xynebW3L') {
         his_raw=GET(data$historyData)
         # get the Json format historical data
         data = fromJSON(rawToChar(his_raw$content))
-        data%>%select(infectedByRegion,lastUpdatedAtApify)%>%unstack()->df
+        data%>%dplyr::select(infectedByRegion,lastUpdatedAtApify)%>%unstack()->df
         for(i in 1:length(df)){
             if (max(df[i][[1]]$deceasedCount,na.omit=T)==0){
                 print(df[i][1])
@@ -85,7 +94,6 @@ Get_data<-function(apikey='4T9GEYHZ7PE9w8H29xynebW3L') {
 }
 
 
-
 # get newest dataset
 Getdata_syncing<-function(apikey='4T9GEYHZ7PE9w8H29xynebW3L') {
     #' Getdata_syncin
@@ -94,7 +102,7 @@ Getdata_syncing<-function(apikey='4T9GEYHZ7PE9w8H29xynebW3L') {
 
     #' @param apikey API token from api.pify
     #' Defaults to "Tow8X4YNqnsWMFGbWxuPynzHh"
-
+    #' @import httr
     #' @usage Getdata_syncing(apikey)
     #' @return A dataframe with 4 columns region,infectedCount,deceasedCount and date
 

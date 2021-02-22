@@ -15,7 +15,9 @@ require(httr)
 
 covid_mapca<-function(stats,token="4T9GEYHZ7PE9w8H29xynebW3L"){
     #' covid_mapca
-    #'
+    #' @import jsonlite
+    #' @import viridis
+    #' @import mapcan
     #' @description This function will return a map of Canada with the selected data of either the current infected count or the current deceased count.
     #' @param stats the data you want to visualize on the map, either 'infectedCount' or 'deceasedCount'
     #' @param token API token from api.pify
@@ -23,6 +25,7 @@ covid_mapca<-function(stats,token="4T9GEYHZ7PE9w8H29xynebW3L"){
 
     #' @usage covid_mapca(stats,token)
     #' @return return a Canada map with select statistics either infected count or deceased count
+    #' @export
     parameter <- c("Total Infected Number", "Totol Deceased Number")
 
 
@@ -46,7 +49,7 @@ covid_mapca<-function(stats,token="4T9GEYHZ7PE9w8H29xynebW3L"){
         cnames[[6,3]]<-2201249
         title=paste("Canada",name,"by Province")
         inner_join(cnames,newest,by=c("pr_english"="region"))->c_df
-        pr_geographic%>%select(pr_english,pr_alpha)->n
+        pr_geographic%>%dplyr::select(pr_english,pr_alpha)->n
         inner_join(c_df,n,by=c("pr_english"="pr_english"))->c_df
         # use ggplot to plot the map
         p<-pr_geographic %>%

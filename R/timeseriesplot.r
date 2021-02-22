@@ -2,6 +2,13 @@
 #'
 #' @description This function creates a time series plot using gg plot of the date range
 #' selected, and plots the number of  people who have died or been infected by COVID-19 in a specified region/regions.
+#'
+#' @import jsonlite
+#' @import ggplot2
+#' @import stringr
+#' @import cowplot
+#' @import tidyverse
+#' @import ggrepel
 #' @param apikey API token from api.pify
 #' @param data character. The COVID-19 you wish to visualize. Use 'infected count', 'infected', 'deceased count' or
 #' 'deceased'.
@@ -41,8 +48,7 @@
 #' @usage time_series_plot(apikey='4T9GEYHZ7PE9w8H29xynebW3L', data, start_date, end_date, region1, region2=NULL, region3=NULL,region4=NULL,region5=NULL,region6=NULL,region7=NULL,region8=NULL,region9=NULL,region10=NULL,region11=NULL,region12=NULL,region13=NULL,region14=NULL,region15=NULL,region16=NULL)
 #' @return a GG plot time series of the date range, data and regions selected
 #' @note Regions must be written in full names
-
-
+#' @export
 time_series_plot <- function(apikey='4T9GEYHZ7PE9w8H29xynebW3L', data, start_date, end_date, region1, region2=NULL, region3=NULL,region4=NULL,region5=NULL
                                 ,region6=NULL,region7=NULL,region8=NULL,region9=NULL,region10=NULL,region11=NULL,region12=NULL
                                  ,region13=NULL,region14=NULL,region15=NULL,region16=NULL) {

@@ -7,11 +7,12 @@ daily_count <- function(){
  #' Daily Counts
     #'
     #' @description This function creates a calculates the daily new cases and death counts from the pre-existing requesting data from the covid dataset.
-
-    #' Defaults to 'NULL'
+    #' @import ggplot2
+    #' @importFrom lubridate ymd_hms
+    #' @import tidyverse
     #' @usage daily_count()
     #' @return a data frame with columns: 'region', 'infectedCount', 'deceasedCount', 'date', 'Daily_new_cases', and 'Daily_deaths', 'seven_day_average'.
-
+    #' @export
 
 suppressWarnings(if(!require(lubridate)) install.packages("lubridate", repos = "https://lubridate.tidyverse.org"))
 suppressWarnings(if(!require(ggplot2)) install.packages("ggplot2", repos = "http://cran.us.r-project.org"))

@@ -3,6 +3,12 @@
 #' @description This function creates a bar chart using gg plot of date selected, and plots the number of new people who have died and been infected by COVID-19 in a specified region, on this #'date .
 
 
+#' @import jsonlite
+#' @import ggplot2
+#' @import stringr
+#' @import cowplot
+#' @import tidyverse
+#' @import ggrepel
 #' @param date1 The date of the bar chart whose new COVID-19 data you wish to visualize. Written in yyyy=mm-dd format.
 #' @param region1 The region whose new COVID-19 data you wish to visualize in the this bar chart, written in string format.
 #' @param region2 The other regions whose new COVID-19 data you wish to visualize in the this bar chart, written in string format.
@@ -35,10 +41,12 @@
 #' Defaults to 'NULL'
 #' @param region16 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
 #' Defaults to 'NULL'
+
 #' @usage day_covid_changes(date1, region1, region2=NULL, region3=NULL,region4=NULL,region5=NULL,region6=NULL,region7=NULL,region8=NULL,region9=NULL,region10=NULL,region11=NULL,region12=NULL, region13=NULL,region14=NULL,region15=NULL, region16=NULL)
 #' @return Two GG plot bar charts of the number of new infections and deaths, on a specified date for the regions selected
 #' @note Regions must be written in full names
 
+#' @export
 day_covid_changes <- function(date1, region1, region2=NULL, region3=NULL,region4=NULL,region5=NULL
                                 ,region6=NULL,region7=NULL,region8=NULL,region9=NULL,region10=NULL,region11=NULL,region12=NULL, region13=NULL,region14=NULL,region15=NULL, region16=NULL
                                ){
