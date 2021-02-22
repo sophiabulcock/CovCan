@@ -5,40 +5,9 @@ date: "18/02/2021"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-<<<<<<< HEAD:vigneette_witholot.Rmd
-load_all()
-```
-
-```{r}
-release(pkg = ".", check = FALSE)
-```
-```{r}
-check_rhub()
-```
 
 
-```{r}
-release_checks()
-```
 
-```{r}
-library(CovCan)
-CovCan::Get_data('Tow8X4YNqnsWMFGbWxuPynzHh')
-```
-
-```{r}
-library(CovCan)
-CovCan::daily_count('Tow8X4YNqnsWMFGbWxuPynzHh')
-```
-
-```{r}
-library(CovCan)
-CovCan::covid_mapca('infectedCount','Tow8X4YNqnsWMFGbWxuPynzHh')
-=======
-knitr::opts_chunk$set(echo = TRUE)
->>>>>>> de704ee7a8ed473d6323fe4eba29ae89adac79ae:Vignette.Rmd
-```
 # Introduction to CovCan
 
 
