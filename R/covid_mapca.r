@@ -49,7 +49,7 @@ covid_mapca<-function(stats,token="4T9GEYHZ7PE9w8H29xynebW3L"){
         cnames[[6,3]]<-2201249
         title=paste("Canada",name,"by Province")
         inner_join(cnames,newest,by=c("pr_english"="region"))->c_df
-        pr_geographic%>%select(pr_english,pr_alpha)->n
+        pr_geographic%>%dplyr::select(pr_english,pr_alpha)->n
         inner_join(c_df,n,by=c("pr_english"="pr_english"))->c_df
         # use ggplot to plot the map
         p<-pr_geographic %>%

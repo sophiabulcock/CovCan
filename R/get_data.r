@@ -46,7 +46,7 @@ Get_data<-function(apikey='4T9GEYHZ7PE9w8H29xynebW3L') {
         his_raw=GET(data$historyData)
         # get the Json format historical data
         data = fromJSON(rawToChar(his_raw$content))
-        data%>%select(infectedByRegion,lastUpdatedAtApify)%>%unstack()->df
+        data%>%dplyr::select(infectedByRegion,lastUpdatedAtApify)%>%unstack()->df
         for(i in 1:length(df)){
             if (max(df[i][[1]]$deceasedCount,na.omit=T)==0){
                 print(df[i][1])
