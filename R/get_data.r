@@ -20,7 +20,6 @@ Get_data<-function(apikey='4T9GEYHZ7PE9w8H29xynebW3L') {
     #' @import tidyverse
     #' @param apikey API token from api.pify
     #' Defaults to "Tow8X4YNqnsWMFGbWxuPynzHh"
-
     #' @usage Get_data(apikey)
     #' @return A dataframe with 4 columns region,infectedCount,deceasedCount and date
     #' @export
