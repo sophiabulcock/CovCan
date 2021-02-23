@@ -1,5 +1,5 @@
 Package: CovCan
-Title: Canadian Covid-19 statistics and visulization package
+Title: Canadian Covid-19 Statistics and Visulization package
 Version: 0.1.0000
 Authors@R: 
   c(person(given = "Yuxuan",
