@@ -1,7 +1,7 @@
 # ---
 #' Covid Changes Between Days
 #'
-#' @description This function creates a bar chart using gg plot of the two dates selected, and #'plots the number of people who have died and been infected by COVID-19 in a specified region, #'on these two dates.
+#' @description This function creates a bar chart using gg plot of the two dates selected, and plots the number of people who have died and been infected by COVID-19 in a specified region, on these two dates.
 #' @import jsonlite
 #' @import ggplot2
 #' @import stringr
@@ -13,33 +13,33 @@
 #' @param region1 The region whose COVID-19 data you wish to visualize in the this comparative bar chart, written in string format.
 #' @param region2 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
 #' Defaults to 'NULL'
-#' @param region3 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' @param region3 The other regions whose COVID-19 data you wish to visualize in the this comparative bar chart, written in string format.
 #' Defaults to 'NULL'
-#' @param region4 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' @param region4 The other regions whose COVID-19 data you wish to visualize in the this comparative bar chart, written in string format.
 #' Defaults to 'NULL'
-#' @param region5 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' @param region5 The other regions whose COVID-19 data you wish to visualize in the this comparative bar chart, written in string format.
 #' Defaults to 'NULL'
-#' @param region6 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' @param region6 The other regions whose COVID-19 data you wish to visualize in the this comparative bar chart, written in string format.
 #' Defaults to 'NULL'
-#' @param region7 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' @param region7 The other regions whose COVID-19 data you wish to visualize in the this comparative bar chart, written in string format.
 #' Defaults to 'NULL'
-#' @param region8 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' @param region8 The other regions whose COVID-19 data you wish to visualize in the this comparative bar chart, written in string format.
 #' Defaults to 'NULL'
-#' @param region9 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' @param region9 The other regions whose COVID-19 data you wish to visualize in the this comparative bar chart, written in string format.
 #' Defaults to 'NULL'
-#' @param region10 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' @param region10 The other regions whose COVID-19 data you wish to visualize in the this comparative bar chart, written in string format.
 #' Defaults to 'NULL'
-#' @param region11 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' @param region11 The other regions whose COVID-19 data you wish to visualize in the this comparative bar chart, written in string format.
 #' Defaults to 'NULL'
-#' @param region12 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' @param region12 The other regions whose COVID-19 data you wish to visualize in the this comparative bar chart, written in string format.
 #' Defaults to 'NULL'
-#' @param region13 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' @param region13 The other regions whose COVID-19 data you wish to visualize in the this comparative bar chart, written in string format.
 #' Defaults to 'NULL'
-#' @param region14 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' @param region14 The other regions whose COVID-19 data you wish to visualize in the this comparative bar chart, written in string format.
 #' Defaults to 'NULL'
-#' @param region15 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' @param region15 The other regions whose COVID-19 data you wish to visualize in the this comparative bar chart, written in string format.
 #' Defaults to 'NULL'
-#' @param region16 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' @param region16 The other regions whose COVID-19 data you wish to visualize in the this comparative bar chart, written in string format.
 #' Defaults to 'NULL'
 #' @usage covid_changes_between_days(day1, day2, region1, region2=NULL, region3=NULL,region4=NULL,region5=NULL,region6=NULL,region7=NULL,region8=NULL,region9=NULL,region10=NULL,region11=NULL,region12=NULL,region13=NULL,region14=NULL,region15=NULL,region16=NULL)
 #' @return Two GG plot bar charts of the COVID-19 data, for days and regions selected
@@ -58,11 +58,11 @@ suppressWarnings(if(!require(cowplot)) install.packages("cowplot", repos = "http
 suppressWarnings(if(!require(tidyverse)) install.packages("tidyverse", repos ="http://tidyverse.tidyverse.org"))
 suppressWarnings(if(!require(ggrepel)) install.packages("ggrepel", repos = "https://github.com/slowkow/ggrepel"))
 require(httr)
-# if statement checks for correctness of input parameters. If this is not met, the error message is printed out in the else
+# if statement checks for correctness of input parameters. If this is not met, the error message is printed out in the else statement
 if(((is.character(day1))&&(is.character(day2))&&(is.character(region1)))==TRUE){
 
 
-# insert token into daily_count function to get all historical data + calculations
+# insert token into daily_count function to get all historical data and calculations
 df3<-daily_count()
 
 # subset both selected days into their own data frames
