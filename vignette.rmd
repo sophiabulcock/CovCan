@@ -71,7 +71,7 @@ library(CovCan)
 
 * Quebec
 
-* Repatriated travellers (travellers returned home)
+* Repatriated travelers (travellers returned home)
 
 * Saskatchewan
 
@@ -137,7 +137,7 @@ This data frame consists of the following columns. 'region' denoting the region 
 
 
 
-The `daily_count()` function allows users to use the data generated  above in `Get_data()` function, and returns a data frame exactly like the `Get_data()` function , but with additional columns. These columns are as follows. 'Daily_new_cases' denotes the amount of new COVID-19 cases recorded since the previous day.  'Daily_deaths' denotes the amount of new COVID-19 deaths recorded since the previous day. 'seven_day_average' denotes _______
+The `daily_count()` function allows users to use the data generated  above in `Get_data()` function, and returns a data frame exactly like the `Get_data()` function , but with additional columns. These columns are as follows. 'Daily_new_cases' denotes the amount of new COVID-19 cases recorded since the previous day.  'Daily_deaths' denotes the amount of new COVID-19 deaths recorded since the previous day. 'seven_day_average' the seven day average counts.
 
 
 
