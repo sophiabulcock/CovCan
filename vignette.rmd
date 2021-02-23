@@ -2,7 +2,7 @@
 title: "vignette_with_plots"
 author: "Yuxuan Graham Sophia"
 date: "18/02/2021"
-output: rmarkdown::html_vignette
+output: html
 
 
 ---
@@ -27,9 +27,9 @@ The CovCan package makes getting this information simple, and allows users to:
 
 ```{R, include=FALSE}
 
-library(devtools)
 
-load_all()
+
+
 
 
 library(CovCan)
