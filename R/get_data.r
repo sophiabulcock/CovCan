@@ -8,7 +8,7 @@
 Get_data<-function(apikey='4T9GEYHZ7PE9w8H29xynebW3L') {
     #' Get_data
     #'
-    #' @description This function will return a well-formed dataframe that contains basic Covid information
+    #' @description This function returns a well-formed data frame that contains basic Canadian COVID-19 information by region
     #' @importFrom lubridate ymd_hms
     #' @import jsonlite
     #' @import ggplot2
@@ -18,11 +18,11 @@ Get_data<-function(apikey='4T9GEYHZ7PE9w8H29xynebW3L') {
     #' @import ggrepel
     #' @import httr
     #' @import tidyverse
-    #' @param apikey API token from api.pify
+    #' @param apikey API token from Apify
     #' Defaults to "Tow8X4YNqnsWMFGbWxuPynzHh"
 
     #' @usage Get_data(apikey)
-    #' @return A dataframe with 4 columns region,infectedCount,deceasedCount and date
+    #' @return A data frame with 4 columns region,infectedCount,deceasedCount and the date
     #' @export
   # load libraries
   suppressWarnings(if(!require(ggplot2)) install.packages("stringr", repos = "http://cran.us.r-project.org"))
@@ -41,11 +41,11 @@ Get_data<-function(apikey='4T9GEYHZ7PE9w8H29xynebW3L') {
 
     # test if it has sucessfully connected
     if(http_status(raw.result)$category=="Success"){
-        # get the Json data
+        # get the JSON data
         data = fromJSON(rawToChar(raw.result$content))
         # getting historical data
         his_raw=GET(data$historyData)
-        # get the Json format historical data
+        # get the JSON formated historical data
         data = fromJSON(rawToChar(his_raw$content))
         data%>%dplyr::select(infectedByRegion,lastUpdatedAtApify)%>%unstack()->df
         for(i in 1:length(df)){
@@ -55,14 +55,14 @@ Get_data<-function(apikey='4T9GEYHZ7PE9w8H29xynebW3L') {
 
             }
         }
-        # make a dataframe
+        # make a data frame
         df<-do.call(what = "rbind", args = lapply(df, as.data.frame))
         # data cleaning for datetime
         df$datetime<-row.names(df)
         str_replace_all(df$datetime,'T',' ')->new
         df$datetime<-gsub("\\..*","",new)
         df$datetime<-ymd_hms(df$datetime,tz=Sys.timezone())
-        # repalce row name to numeric index
+        # replace row names to numeric index
         rownames(df) <- 1:nrow(df)
         df$infectedCount<-as.numeric(df$infectedCount)
         df$deceasedCount<-as.numeric(df$deceasedCount)
@@ -96,15 +96,15 @@ Get_data<-function(apikey='4T9GEYHZ7PE9w8H29xynebW3L') {
 
 # get newest dataset
 Getdata_syncing<-function(apikey='4T9GEYHZ7PE9w8H29xynebW3L') {
-    #' Getdata_syncin
+    #' Getdata_syncing
     #'
-    #' @description This function will return a latest veresion of well-formed dataframe that contains basic Covid information
+    #' @description This function returns the latest veresion of a well-formed data frame that contains basic Canadian COVID-19 information by region
 
-    #' @param apikey API token from api.pify
+    #' @param apikey API token from apify
     #' Defaults to "Tow8X4YNqnsWMFGbWxuPynzHh"
     #' @import httr
     #' @usage Getdata_syncing(apikey)
-    #' @return A dataframe with 4 columns region,infectedCount,deceasedCount and date
+    #' @return A data frame with 4 columns region, infectedCount, deceasedCount and the date
 
     url<-"https://api.apify.com"
     path<-"v2/acts/lukass~covid-cad/run-sync-get-dataset-items"
@@ -122,7 +122,7 @@ Getdata_syncing<-function(apikey='4T9GEYHZ7PE9w8H29xynebW3L') {
         return(df)
 
     }
-    #print out the error message
+    # print out the error message
     else{
         print(http_status(raw.result)$message)
     }
