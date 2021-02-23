@@ -9,7 +9,7 @@
 #' @import ggrepel
 #'
 #' @param token apikey used to access data'
-#' @param data character. The COVID-19 you wish to visualize. Use 'infected count', 'infected', 'deceased count',
+#' @param data character. The COVID-19 data that you wish to visualize. Use 'infected count', 'infected', 'deceased count',
 #' 'deceased', 'both or 'Both'.
 #' @param region1 The region you wish to visualize in the this current data bar chart, written in string format.
 #' @param region2 The other regions you wish to visualize in this bar chart written in string format.
