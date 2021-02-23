@@ -26,7 +26,7 @@ covid_mapca<-function(stats,token="4T9GEYHZ7PE9w8H29xynebW3L"){
     #' @usage covid_mapca(stats,token)
     #' @return return a map of Canada with select statistics of either infected count or deceased count
     #' @export
-    parameter <- c("Total Infected Number", "Totol Deceased Number")
+    parameter <- c("Total Infected Number", "Total Deceased Number")
 
 
 
