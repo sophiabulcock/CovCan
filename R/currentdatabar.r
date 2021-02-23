@@ -14,37 +14,37 @@
 #' @param region1 The region you wish to visualize in the this current data bar chart, written in string format.
 #' @param region2 The other regions you wish to visualize in this bar chart written in string format.
 #' Defaults to 'NULL'
-#' @param region3 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' @param region3 The other regions whose COVID-19 data you wish to visualize in the this comparative bar chart, written in string format.
 #' Defaults to 'NULL'
-#' @param region4 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' @param region4 The other regions whose COVID-19 data you wish to visualize in the this comparative bar chart, written in string format.
 #' Defaults to 'NULL'
-#' @param region5 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' @param region5 The other regions whose COVID-19 data you wish to visualize in this comparative bar chart, written in string format.
 #' Defaults to 'NULL'
-#' @param region6 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' @param region6 The other regions whose COVID-19 data you wish to visualize in this comparative bar chart, written in string format.
 #' Defaults to 'NULL'
-#' @param region7 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' @param region7 The other regions whose COVID-19 data you wish to visualize in this comparative bar chart, written in string format.
 #' Defaults to 'NULL'
-#' @param region8 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' @param region8 The other regions whose COVID-19 data you wish to visualize in this comparative bar chart, written in string format.
 #' Defaults to 'NULL'
-#' @param region9 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' @param region9 The other regions whose COVID-19 data you wish to visualize in this comparative bar chart, written in string format.
 #' Defaults to 'NULL'
-#' @param region10 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' @param region10 The other regions whose COVID-19 data you wish to visualize in this comparative bar chart, written in string format.
 #' Defaults to 'NULL'
-#' @param region11 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' @param region11 The other regions whose COVID-19 data you wish to visualize in this comparative bar chart, written in string format.
 #' Defaults to 'NULL'
-#' @param region12 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' @param region12 The other regions whose COVID-19 data you wish to visualize in this comparative bar chart, written in string format.
 #' Defaults to 'NULL'
-#' @param region13 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' @param region13 The other regions whose COVID-19 data you wish to visualize in this comparative bar chart, written in string format.
 #' Defaults to 'NULL'
-#' @param region14 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' @param region14 The other regions whose COVID-19 data you wish to visualize in this comparative bar chart, written in string format.
 #' Defaults to 'NULL'
-#' @param region15 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' @param region15 The other regions whose COVID-19 data you wish to visualize in this comparative bar chart, written in string format.
 #' Defaults to 'NULL'
-#' @param region16 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' @param region16 The other regions whose COVID-19 data you wish to visualize in this comparative bar chart, written in string format.
 #' Defaults to 'NULL'
 #' @usage current_data_barchart(token='4T9GEYHZ7PE9w8H29xynebW3L', data, region1, region2=NULL, region3=NULL,region4=NULL,region5=NULL,region6=NULL,region7=NULL,region8=NULL,region9=NULL,region10=NULL,region11=NULL,region12=NULL,region13=NULL,region14=NULL,region15=NULL,region16=NULL)
 #' @return a GG plot bar chart of the current COVID-19 data for the specified regions
-#' @note Regions must be written in full names
+#' @note Regions must be written in full names starting with a capital letter
 #' @export
 
 current_data_barchart <- function(token='4T9GEYHZ7PE9w8H29xynebW3L', data, region1, region2=NULL, region3=NULL,region4=NULL,region5=NULL
@@ -62,7 +62,7 @@ suppressWarnings(if(!require(ggrepel)) install.packages("ggrepel", repos = "http
 
 
 
-# if statement checks for correctness of input parameters. If this is not met, the error message is printed out in the else
+# if statement checks for correctness of input parameters. If this is not met, the error message is printed out in the else statement
 if(((((data=='infected count') | (data=='infected')|(data=='deceased count') |  (data=='deceased')|(data=='both') |  (data=='Both'))) && (is.character(region1)))==TRUE){
 
 # make a vector of the regions inputed as parameters
@@ -130,7 +130,7 @@ return(plots)
 
 }
 
-     else{ print("Please enter valid parameters. Choose infected, infected count, deceased count,deceased or both for data in string format. Enter valid regions of Canada in string format
+     else{ print("Please enter valid parameters. Choose infected, infected count, deceased count, deceased or both for data in string format. Enter valid regions of Canada in string format
 ")}
 
 
