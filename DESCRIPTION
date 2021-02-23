@@ -1,6 +1,6 @@
 Package: CovCan
-Title: Canadian Covid-19 Statistics and Visulization package
-Version: 0.1.0000
+Title: 'Canadian Covid-19 Statistics and Visulization package'
+Version: 0.1.10
 Authors@R: 
   c(person(given = "Yuxuan",
            family = "Cui",
@@ -14,7 +14,7 @@ Authors@R:
            family = "Kerford",
            role = "ctb",
            email = "graham.kerford@gmail.com"))
-Description: What the package does (one paragraph)
+Description: Canadian Covid-19 Statistics and Visulization package,able to retrieve newest covid cases in Canada and visulize the trend of data 
 License: MIT + file LICENSE
 Depends:
 	R (>= 3.2.0)
