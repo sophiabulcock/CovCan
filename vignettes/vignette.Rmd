@@ -8,17 +8,6 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>"
-)
-```
-
-```{r setup}
-library(CovCan)
-```
-
 
 
 # Introduction to CovCan
@@ -37,10 +26,6 @@ The CovCan package makes getting this information simple, and allows users to:
 * Calculate and visualize the daily new infection and death counts
 
 ```{R, include=FALSE}
-
-library(devtools)
-
-load_all()
 
 
 library(CovCan)
