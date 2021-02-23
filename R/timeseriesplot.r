@@ -17,37 +17,37 @@
 #' @param region1 The region you wish to visualize in the this time series plot, written in string format.
 #' @param region2 The other regions you wish to visualize in the this time series plot written in string format.
 #' Defaults to 'NULL'
-#' @param region3 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' @param region3 The other regions whose COVID-19 data you wish to visualize this time series plot, written in string format.
 #' Defaults to 'NULL'
-#' @param region4 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' @param region4 The other regions whose COVID-19 data you wish to visualize in this time series plot, written in string format.
 #' Defaults to 'NULL'
-#' @param region5 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' @param region5 The other regions whose COVID-19 data you wish to visualize in this time series plot, written in string format.
 #' Defaults to 'NULL'
-#' @param region6 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' @param region6 The other regions whose COVID-19 data you wish to visualize in this time series plot, written in string format.
 #' Defaults to 'NULL'
-#' @param region7 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' @param region7 The other regions whose COVID-19 data you wish to visualize in this time series plot, written in string format.
 #' Defaults to 'NULL'
-#' @param region8 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' @param region8 The other regions whose COVID-19 data you wish to visualize in this time series plot, written in string format.
 #' Defaults to 'NULL'
-#' @param region9 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' @param region9 The other regions whose COVID-19 data you wish to visualize in this time series plot, written in string format.
 #' Defaults to 'NULL'
-#' @param region10 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' @param region10 The other regions whose COVID-19 data you wish to visualize in this time series plot, written in string format.
 #' Defaults to 'NULL'
-#' @param region11 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' @param region11 The other regions whose COVID-19 data you wish to visualize in this time series plot, written in string format.
 #' Defaults to 'NULL'
-#' @param region12 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' @param region12 The other regions whose COVID-19 data you wish to visualize in this time series plot, written in string format.
 #' Defaults to 'NULL'
-#' @param region13 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' @param region13 The other regions whose COVID-19 data you wish to visualize in this time series plot, written in string format.
 #' Defaults to 'NULL'
-#' @param region14 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' @param region14 The other regions whose COVID-19 data you wish to visualize in this time series plot, written in string format.
 #' Defaults to 'NULL'
-#' @param region15 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' @param region15 The other regions whose COVID-19 data you wish to visualize in this time series plot, written in string format.
 #' Defaults to 'NULL'
-#' @param region16 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+#' @param region16 The other regions whose COVID-19 data you wish to visualize in this time series plot , written in string format.
 #' Defaults to 'NULL'
 #' @usage time_series_plot(apikey='4T9GEYHZ7PE9w8H29xynebW3L', data, start_date, end_date, region1, region2=NULL, region3=NULL,region4=NULL,region5=NULL,region6=NULL,region7=NULL,region8=NULL,region9=NULL,region10=NULL,region11=NULL,region12=NULL,region13=NULL,region14=NULL,region15=NULL,region16=NULL)
 #' @return a GG plot time series of the date range, data and regions selected
-#' @note Regions must be written in full names
+#' @note Regions must be written in full names starting with a capital letter
 #' @export
 time_series_plot <- function(apikey='4T9GEYHZ7PE9w8H29xynebW3L', data, start_date, end_date, region1, region2=NULL, region3=NULL,region4=NULL,region5=NULL
                                 ,region6=NULL,region7=NULL,region8=NULL,region9=NULL,region10=NULL,region11=NULL,region12=NULL
@@ -66,11 +66,11 @@ suppressWarnings(if(!require(tidyverse)) install.packages("tidyverse", repos ="h
 suppressWarnings(if(!require(ggrepel)) install.packages("ggrepel", repos = "https://github.com/slowkow/ggrepel"))
 
 
-# if statement checks for correctness of input parameters. If this is not met, the error message is printed out in the else
+# if statement checks for correctness of input parameters. If this is not met, the error message is printed out in the else statement
 if(((((data=='infected count') | (data=='infected')|(data=='deceased count') |  (data=='deceased'))) && (is.character(start_date))&&(is.character(end_date))&&(is.character(region1)))==TRUE){
 
 
-# insert token into get_data_hist function to get all historical data
+# insert token into Get_data function to get all historical data
 historical_clean_df<- Get_data(apikey='4T9GEYHZ7PE9w8H29xynebW3L')
 
 # make a vector of the regions inputed as parameters

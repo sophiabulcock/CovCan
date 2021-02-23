@@ -6,7 +6,7 @@ daily_count <- function(){
 
  #' Daily Counts
     #'
-    #' @description This function creates a calculates the daily new cases and death counts from the pre-existing requesting data from the covid dataset.
+    #' @description This function creates and calculates the daily new cases and death counts from the pre-existing data frame made by the Get_data() function.
     #' @import ggplot2
     #' @importFrom lubridate ymd_hms
     #' @import tidyverse
@@ -23,7 +23,7 @@ suppressWarnings(if(!require(tidyverse)) install.packages("tidyverse", repos = "
     token="4T9GEYHZ7PE9w8H29xynebW3L"
     cleaned_data <- Get_data(token)
 
-    # Add column for daily case counts
+    # Add a column for daily case counts
     provin <- unique(cleaned_data$region)
     cd_daily <- list()
 
@@ -64,7 +64,7 @@ suppressWarnings(if(!require(tidyverse)) install.packages("tidyverse", repos = "
             for(j in 0:6){
 
                 # If there are less than 7 days in the count
-                # Calculates the average using the number of daily case counts added to the sum
+                # Calculates the 7 day average using the number of daily case counts added to the sum
                 if(i-j>0){
                     temp_sum <- temp_sum + cd_daily[[i-j,5]]
                     count <- count+1
