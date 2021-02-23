@@ -8,8 +8,8 @@
 #' @import cowplot
 #' @import tidyverse
 #' @import ggrepel
-#' @param day1 The first date of the bar chart that you wish to visualize and compare. Written in yyyy=mm-dd format.
-#' @param day2 The second date of the bar chart that you wish to visualize and compare. Written in yyyy=mm-dd format.
+#' @param day1 The first date of the bar chart that you wish to visualize and compare. Written in yyyy-mm-dd format.
+#' @param day2 The second date of the bar chart that you wish to visualize and compare. Written in yyyy-mm-dd format.
 #' @param region1 The region whose COVID-19 data you wish to visualize in the this comparative bar chart, written in string format.
 #' @param region2 The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
 #' Defaults to 'NULL'
