@@ -14,5 +14,5 @@ Defaults to "Tow8X4YNqnsWMFGbWxuPynzHh"}
 A data frame with 4 columns region, infectedCount, deceasedCount and the date
 }
 \description{
-This function returns the latest veresion of a well-formed data frame that contains basic Canadian COVID-19 information by region
+This function will return a latest veresion of well-formed dataframe that contains basic Covid information
 }
