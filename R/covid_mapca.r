@@ -24,7 +24,7 @@ covid_mapca<-function(stats,token="4T9GEYHZ7PE9w8H29xynebW3L"){
     #' Defaults to "Tow8X4YNqnsWMFGbWxuPynzHh"
 
     #' @usage covid_mapca(stats,token)
-    #' @return return a Canada map with select statistics either infected count or deceased count
+    #' @return return a map of Canada with select statistics of either infected count or deceased count
     #' @export
     parameter <- c("Total Infected Number", "Totol Deceased Number")
 
@@ -32,7 +32,7 @@ covid_mapca<-function(stats,token="4T9GEYHZ7PE9w8H29xynebW3L"){
 
 
     names(parameter) <- c("infectedCount", "deceasedCount")
-    # test if user has enter a right parameter
+    # test if user has entered the right parameter
     if(stats=="infectedCount" |stats=="deceasedCount"){
         name<-parameter[[stats]]
          newest = Getdata_syncing(token)
@@ -60,7 +60,7 @@ covid_mapca<-function(stats,token="4T9GEYHZ7PE9w8H29xynebW3L"){
             scale_fill_continuous(trans = 'reverse')+
             ggtitle(title)+guides(color=guide_legend("infect"))+
             theme(plot.title = element_text(face = "bold"),legend.position = c(0.8, 0.6))
-            #,legend.position = c(0.7, 0.7)
+            # legend.position = c(0.7, 0.7)
         p<-p+labs(fill=name)
         p<-p+geom_text(data=c_df, aes(long, lat, label =infectedCount),color="grey", size=2.5)
         p
