@@ -2,17 +2,17 @@
 % Please edit documentation in R/get_data.r
 \name{Getdata_syncing}
 \alias{Getdata_syncing}
-\title{Getdata_syncin}
+\title{Getdata_syncing}
 \usage{
 Getdata_syncing(apikey)
 }
 \arguments{
-\item{apikey}{API token from api.pify
+\item{apikey}{API token from apify
 Defaults to "Tow8X4YNqnsWMFGbWxuPynzHh"}
 }
 \value{
-A dataframe with 4 columns region,infectedCount,deceasedCount and date
+A data frame with 4 columns region, infectedCount, deceasedCount and the date
 }
 \description{
-This function will return a latest version of well-formed dataframe that contains basic Covid information
+This function returns the latest veresion of a well-formed data frame that contains basic Canadian COVID-19 information by region
 }

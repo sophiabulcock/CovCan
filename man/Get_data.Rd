@@ -7,12 +7,12 @@
 Get_data(apikey)
 }
 \arguments{
-\item{apikey}{API token from api.pify
+\item{apikey}{API token from Apify
 Defaults to "Tow8X4YNqnsWMFGbWxuPynzHh"}
 }
 \value{
-A dataframe with 4 columns region,infectedCount,deceasedCount and date
+A data frame with 4 columns region,infectedCount,deceasedCount and the date
 }
 \description{
-This function will return a well-formed dataframe that contains basic Covid information
+This function returns a well-formed data frame that contains basic Canadian COVID-19 information by region
 }

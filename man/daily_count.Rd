@@ -10,5 +10,5 @@ daily_count()
 a data frame with columns: 'region', 'infectedCount', 'deceasedCount', 'date', 'Daily_new_cases', and 'Daily_deaths', 'seven_day_average'.
 }
 \description{
-This function creates a calculates the daily new cases and death counts from the pre-existing requesting data from the covid dataset.
+This function creates and calculates the daily new cases and death counts from the pre-existing data frame made by the Get_data() function.
 }

@@ -21,46 +21,46 @@ time_series_plot(apikey='4T9GEYHZ7PE9w8H29xynebW3L', data, start_date, end_date,
 \item{region2}{The other regions you wish to visualize in the this time series plot written in string format.
 Defaults to 'NULL'}
 
-\item{region3}{The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+\item{region3}{The other regions whose COVID-19 data you wish to visualize this time series plot, written in string format.
 Defaults to 'NULL'}
 
-\item{region4}{The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+\item{region4}{The other regions whose COVID-19 data you wish to visualize in this time series plot, written in string format.
 Defaults to 'NULL'}
 
-\item{region5}{The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+\item{region5}{The other regions whose COVID-19 data you wish to visualize in this time series plot, written in string format.
 Defaults to 'NULL'}
 
-\item{region6}{The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+\item{region6}{The other regions whose COVID-19 data you wish to visualize in this time series plot, written in string format.
 Defaults to 'NULL'}
 
-\item{region7}{The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+\item{region7}{The other regions whose COVID-19 data you wish to visualize in this time series plot, written in string format.
 Defaults to 'NULL'}
 
-\item{region8}{The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+\item{region8}{The other regions whose COVID-19 data you wish to visualize in this time series plot, written in string format.
 Defaults to 'NULL'}
 
-\item{region9}{The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+\item{region9}{The other regions whose COVID-19 data you wish to visualize in this time series plot, written in string format.
 Defaults to 'NULL'}
 
-\item{region10}{The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+\item{region10}{The other regions whose COVID-19 data you wish to visualize in this time series plot, written in string format.
 Defaults to 'NULL'}
 
-\item{region11}{The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+\item{region11}{The other regions whose COVID-19 data you wish to visualize in this time series plot, written in string format.
 Defaults to 'NULL'}
 
-\item{region12}{The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+\item{region12}{The other regions whose COVID-19 data you wish to visualize in this time series plot, written in string format.
 Defaults to 'NULL'}
 
-\item{region13}{The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+\item{region13}{The other regions whose COVID-19 data you wish to visualize in this time series plot, written in string format.
 Defaults to 'NULL'}
 
-\item{region14}{The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+\item{region14}{The other regions whose COVID-19 data you wish to visualize in this time series plot, written in string format.
 Defaults to 'NULL'}
 
-\item{region15}{The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+\item{region15}{The other regions whose COVID-19 data you wish to visualize in this time series plot, written in string format.
 Defaults to 'NULL'}
 
-\item{region16}{The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+\item{region16}{The other regions whose COVID-19 data you wish to visualize in this time series plot , written in string format.
 Defaults to 'NULL'}
 }
 \value{
@@ -71,5 +71,5 @@ This function creates a time series plot using gg plot of the date range
 selected, and plots the number of  people who have died or been infected by COVID-19 in a specified region/regions.
 }
 \note{
-Regions must be written in full names
+Regions must be written in full names starting with a capital letter
 }

@@ -9,7 +9,7 @@ current_data_barchart(token='4T9GEYHZ7PE9w8H29xynebW3L', data, region1, region2=
 \arguments{
 \item{token}{apikey used to access data'}
 
-\item{data}{character. The COVID-19 you wish to visualize. Use 'infected count', 'infected', 'deceased count',
+\item{data}{character. The COVID-19 data that you wish to visualize. Use 'infected count', 'infected', 'deceased count',
 'deceased', 'both or 'Both'.}
 
 \item{region1}{The region you wish to visualize in the this current data bar chart, written in string format.}
@@ -17,46 +17,46 @@ current_data_barchart(token='4T9GEYHZ7PE9w8H29xynebW3L', data, region1, region2=
 \item{region2}{The other regions you wish to visualize in this bar chart written in string format.
 Defaults to 'NULL'}
 
-\item{region3}{The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+\item{region3}{The other regions whose COVID-19 data you wish to visualize in the this comparative bar chart, written in string format.
 Defaults to 'NULL'}
 
-\item{region4}{The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+\item{region4}{The other regions whose COVID-19 data you wish to visualize in the this comparative bar chart, written in string format.
 Defaults to 'NULL'}
 
-\item{region5}{The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+\item{region5}{The other regions whose COVID-19 data you wish to visualize in this comparative bar chart, written in string format.
 Defaults to 'NULL'}
 
-\item{region6}{The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+\item{region6}{The other regions whose COVID-19 data you wish to visualize in this comparative bar chart, written in string format.
 Defaults to 'NULL'}
 
-\item{region7}{The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+\item{region7}{The other regions whose COVID-19 data you wish to visualize in this comparative bar chart, written in string format.
 Defaults to 'NULL'}
 
-\item{region8}{The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+\item{region8}{The other regions whose COVID-19 data you wish to visualize in this comparative bar chart, written in string format.
 Defaults to 'NULL'}
 
-\item{region9}{The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+\item{region9}{The other regions whose COVID-19 data you wish to visualize in this comparative bar chart, written in string format.
 Defaults to 'NULL'}
 
-\item{region10}{The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+\item{region10}{The other regions whose COVID-19 data you wish to visualize in this comparative bar chart, written in string format.
 Defaults to 'NULL'}
 
-\item{region11}{The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+\item{region11}{The other regions whose COVID-19 data you wish to visualize in this comparative bar chart, written in string format.
 Defaults to 'NULL'}
 
-\item{region12}{The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+\item{region12}{The other regions whose COVID-19 data you wish to visualize in this comparative bar chart, written in string format.
 Defaults to 'NULL'}
 
-\item{region13}{The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+\item{region13}{The other regions whose COVID-19 data you wish to visualize in this comparative bar chart, written in string format.
 Defaults to 'NULL'}
 
-\item{region14}{The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+\item{region14}{The other regions whose COVID-19 data you wish to visualize in this comparative bar chart, written in string format.
 Defaults to 'NULL'}
 
-\item{region15}{The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+\item{region15}{The other regions whose COVID-19 data you wish to visualize in this comparative bar chart, written in string format.
 Defaults to 'NULL'}
 
-\item{region16}{The other regions whose COVID-19 data you wish to visualize in the #'this comparative bar chart, written in string format.
+\item{region16}{The other regions whose COVID-19 data you wish to visualize in this comparative bar chart, written in string format.
 Defaults to 'NULL'}
 }
 \value{
@@ -66,5 +66,5 @@ a GG plot bar chart of the current COVID-19 data for the specified regions
 This function creates a bar chart plot using gg plot, and plots a bar chart of the number of people who have died or been infected by COVID-19 to date in a specified region/regions.
 }
 \note{
-Regions must be written in full names
+Regions must be written in full names starting with a capital letter
 }

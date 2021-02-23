@@ -13,7 +13,7 @@ covid_mapca(stats,token)
 Defaults to "Tow8X4YNqnsWMFGbWxuPynzHh"}
 }
 \value{
-return a Canada map with select statistics either infected count or deceased count
+return a map of Canada with select statistics of either infected count or deceased count
 }
 \description{
 This function will return a map of Canada with the selected data of either the current infected count or the current deceased count.
